@@ -11,10 +11,10 @@ const menuOpen = ref(false)
 const activeDistrict = ref('土城')
 
 const navItems = [
-  { label: '認識亞倫', href: '#about' },
   { label: '四大政見', href: '#policies' },
   { label: '在地行動', href: '#local' },
-  { label: '照片牆', href: 'gallery.html' },
+  { label: '照片牆', href: '#gallery' },
+  { label: '認識亞倫', href: '#about' },
   { label: '最新影音', href: '#videos' },
   { label: '最新行程', href: '#events' },
 ]
@@ -79,7 +79,6 @@ function pickRecentShorts(items, count) {
   return recentItems.slice(0, count).map((video) => ({
     ...video,
     viewsLabel: formatViewCount(video.views),
-    thumbnail: `https://i.ytimg.com/vi/${video.id}/frame0.jpg`,
   }))
 }
 
@@ -370,7 +369,7 @@ function closeMenu() {
           </div>
         </div>
 
-        <div class="local-gallery" data-reveal>
+        <div id="gallery" class="local-gallery" data-reveal>
           <div class="local-gallery-heading">
             <div>
               <p class="section-kicker light">RECENT MOMENTS</p>
@@ -452,29 +451,31 @@ function closeMenu() {
         </div>
 
         <div class="video-grid">
-          <a
+          <article
             v-for="(video, index) in videos"
             :key="video.id"
             class="video-card"
-            :class="{ featured: index === 0 }"
-            :href="`https://www.youtube.com/shorts/${video.id}`"
-            target="_blank"
-            rel="noopener noreferrer"
             data-reveal
             :style="{ '--delay': `${index * 100}ms` }"
           >
-            <div class="video-image">
-              <img :src="video.thumbnail" :alt="video.title" loading="lazy" />
-              <span class="play-button" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="m9 7 8 5-8 5V7Z" /></svg>
-              </span>
+            <div class="video-image video-embed">
+              <iframe
+                :src="`https://www.youtube.com/embed/${video.id}?rel=0&playsinline=1`"
+                :title="`播放 Shorts：${video.title}`"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
               <span class="video-category">{{ video.category }}</span>
             </div>
             <div class="video-meta">
               <h3>{{ video.title }}</h3>
-              <span>{{ video.viewsLabel }}</span>
+              <div>
+                <span>{{ video.viewsLabel }}</span>
+                <a :href="`https://www.youtube.com/shorts/${video.id}`" target="_blank" rel="noopener noreferrer">YouTube 開啟</a>
+              </div>
             </div>
-          </a>
+          </article>
         </div>
       </section>
 
@@ -558,17 +559,50 @@ function closeMenu() {
     </main>
 
     <footer class="site-footer">
-      <div class="footer-brand">
-        <span class="brand-mark">吳</span>
-        <div><strong>吳亞倫・吳姐姐</strong><small>新人新氣象，服務有力量</small></div>
+      <div class="footer-main">
+        <div class="footer-brand">
+          <span class="brand-mark">吳</span>
+          <div><strong>吳亞倫・吳姐姐</strong><small>新人新氣象，服務有力量</small></div>
+        </div>
+
+        <div class="footer-contact">
+          <a class="footer-contact-card" href="mailto:tppsanying@gmail.com">
+            <span class="footer-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 7l9 7 9-7" /></svg>
+            </span>
+            <span class="footer-contact-copy">
+              <small>聯絡團隊</small>
+              <strong>tppsanying@gmail.com</strong>
+              <span>寫信給我們</span>
+            </span>
+          </a>
+
+          <a
+            class="footer-contact-card footer-location-card"
+            href="https://maps.app.goo.gl/Yc6FjV2raULmgK2Q6"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="footer-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z" /><circle cx="12" cy="9" r="2.4" /></svg>
+            </span>
+            <span class="footer-contact-copy">
+              <small>競選服務處</small>
+              <strong>吳亞倫競選服務處</strong>
+              <span>開啟 Google 地圖</span>
+            </span>
+          </a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="gallery.html">照片牆</a>
-        <a href="https://www.facebook.com/profile.php?id=61584383458056" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://www.youtube.com/@wuyalun1209" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a href="mailto:tppsanying@gmail.com">聯絡團隊</a>
+
+      <div class="footer-meta">
+        <div class="footer-links">
+          <a href="gallery.html">照片牆</a>
+          <a href="https://www.facebook.com/profile.php?id=61584383458056" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.youtube.com/@wuyalun1209" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+        <p>2026 吳亞倫／吳姐姐競選志工團隊</p>
       </div>
-      <p>2026 吳亞倫／吳姐姐競選志工團隊</p>
     </footer>
 
     <nav class="mobile-actions" aria-label="手機快速行動">
