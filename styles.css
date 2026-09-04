@@ -31,7 +31,6 @@ a {
 a:focus-visible {
   outline: 3px solid var(--accent-dark);
   outline-offset: 3px;
-  border-radius: 999px;
 }
 
 .page {
