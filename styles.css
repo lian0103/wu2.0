@@ -100,6 +100,17 @@ li,
   font-size: 1.1rem;
 }
 
+.contact-note {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  font-weight: 700;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -122,6 +133,11 @@ li,
 .button:hover,
 .button:focus-visible {
   transform: translateY(-1px);
+}
+
+.button:focus-visible {
+  outline: 3px solid rgba(143, 95, 69, 0.28);
+  outline-offset: 3px;
 }
 
 .button-primary {
