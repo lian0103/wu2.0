@@ -1,20 +1,14 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import gallerySource from './assets/gallery-source.jpg'
 import { facebookPhotosUrl, galleryItems } from './gallery-data'
 
-const visiblePhotos = ref([])
+const visibleCount = ref(10)
+const visiblePhotos = computed(() => galleryItems.slice(0, visibleCount.value))
 
-function shufflePhotos() {
-  const shuffled = [...galleryItems]
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1))
-    ;[shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]]
-  }
-  visiblePhotos.value = shuffled.slice(0, 10)
+function showMorePhotos() {
+  visibleCount.value = Math.min(visibleCount.value + 6, galleryItems.length)
 }
-
-shufflePhotos()
 </script>
 
 <template>
@@ -44,22 +38,22 @@ shufflePhotos()
           <h1>每一次相遇，<br /><em>都是地方的故事</em></h1>
           <p>走進市場、車站、社區與地方活動，用照片記錄亞倫和鄉親一起走過的每一步。</p>
           <div class="gallery-hero-actions">
-            <button type="button" @click="shufflePhotos">
-              換一批照片
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7h-5l-2-2M4 17h5l2 2M18 6c-4-3-9-1-11 3M6 18c4 3 9 1 11-3" /></svg>
-            </button>
+            <a class="is-primary" href="#photo-wall">
+              查看最新照片
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-6-6 6 6 6-6" /></svg>
+            </a>
             <a :href="facebookPhotosUrl" target="_blank" rel="noopener noreferrer">前往 Facebook 看全部</a>
           </div>
         </div>
       </section>
 
-      <section class="gallery-wall-section" aria-labelledby="wall-title">
+      <section id="photo-wall" class="gallery-wall-section" aria-labelledby="wall-title">
         <div class="gallery-wall-heading">
           <div>
             <span>PHOTO WALL</span>
             <h2 id="wall-title">近期行程照片</h2>
           </div>
-          <p>每次開啟頁面會隨機呈現部分照片，保留新鮮感，也讓首頁不用一次載入全部內容。</p>
+          <p>照片依更新時間由新到舊排列，先呈現近期內容，再依序載入更多地方行動紀錄。</p>
         </div>
 
         <div class="gallery-wall" aria-live="polite">
@@ -89,8 +83,8 @@ shufflePhotos()
           </a>
         </div>
 
-        <div class="gallery-refresh">
-          <button type="button" @click="shufflePhotos">隨機換一批</button>
+        <div class="gallery-load-more">
+          <button v-if="visibleCount < galleryItems.length" type="button" @click="showMorePhotos">載入更多照片</button>
           <span>目前顯示 {{ visiblePhotos.length }}／{{ galleryItems.length }} 則</span>
         </div>
       </section>

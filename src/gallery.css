@@ -140,7 +140,7 @@
 
 .gallery-hero-actions button,
 .gallery-hero-actions a,
-.gallery-refresh button,
+.gallery-load-more button,
 .gallery-cta a {
   min-height: 50px;
   border: 2px solid var(--ink);
@@ -149,7 +149,7 @@
   font-weight: 850;
 }
 
-.gallery-hero-actions button {
+.gallery-hero-actions .is-primary {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -270,7 +270,7 @@
   line-height: 1.35;
 }
 
-.gallery-refresh {
+.gallery-load-more {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -278,14 +278,14 @@
   margin-top: 40px;
 }
 
-.gallery-refresh button {
+.gallery-load-more button {
   padding: 10px 22px;
   background: var(--yellow);
   color: var(--ink);
   cursor: pointer;
 }
 
-.gallery-refresh span {
+.gallery-load-more span {
   color: var(--ink-soft);
   font-size: 12px;
   font-weight: 700;
@@ -437,7 +437,7 @@
     font-size: 14px;
   }
 
-  .gallery-refresh {
+  .gallery-load-more {
     flex-direction: column;
     gap: 9px;
     margin-top: 28px;

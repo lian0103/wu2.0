@@ -1,6 +1,7 @@
 export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=61584383458056&sk=photos'
 
-// x / y 對應目前素材圖中的照片位置。日後排程可將 image 欄位改成原始照片網址。
+// 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
+// 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
   { id: 'recent-01', title: '市場行程預告', district: '土樹三鶯', date: '近期更新', x: '0%', y: '0%' },
   { id: 'recent-02', title: '登記參選行動', district: '新北市', date: '近期更新', x: '20%', y: '0%' },

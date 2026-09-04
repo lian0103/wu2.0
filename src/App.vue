@@ -63,16 +63,7 @@ const events = [
   },
 ]
 
-function pickRandomItems(items, count) {
-  const shuffled = [...items]
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1))
-    ;[shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]]
-  }
-  return shuffled.slice(0, count)
-}
-
-const featuredGalleryItems = pickRandomItems(galleryItems, 4)
+const featuredGalleryItems = galleryItems.slice(0, 3)
 
 function formatViewCount(viewCount) {
   return `${new Intl.NumberFormat('zh-TW').format(viewCount)} 次觀看`
@@ -85,7 +76,7 @@ function pickRecentShorts(items, count) {
   const sortedItems = [...items].sort((first, second) => new Date(second.publishedAt) - new Date(first.publishedAt))
   const recentItems = sortedItems.filter((video) => new Date(video.publishedAt) >= cutoff)
 
-  return pickRandomItems(recentItems, count).map((video) => ({
+  return recentItems.slice(0, count).map((video) => ({
     ...video,
     viewsLabel: formatViewCount(video.views),
     thumbnail: `https://i.ytimg.com/vi/${video.id}/frame0.jpg`,
@@ -386,7 +377,7 @@ function closeMenu() {
               <h3>近期行動現場</h3>
             </div>
             <div class="local-gallery-intro">
-              <p>每一次握手、每一段交談，都是理解地方的開始。這裡隨機精選近期走訪紀錄。</p>
+              <p>每一次握手、每一段交談，都是理解地方的開始。這裡依更新時間呈現最新走訪紀錄。</p>
               <a class="text-link local-gallery-link" href="gallery.html">
                 瀏覽完整照片牆
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
