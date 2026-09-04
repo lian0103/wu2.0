@@ -47,10 +47,11 @@ a:focus-visible {
   box-shadow: var(--shadow);
 }
 
-@supports (backdrop-filter: blur(14px)) {
+@supports ((backdrop-filter: blur(14px)) or (-webkit-backdrop-filter: blur(14px))) {
   .hero,
   .section {
     background: var(--surface);
+    -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
   }
 }
