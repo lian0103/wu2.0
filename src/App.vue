@@ -2,6 +2,10 @@
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import portrait from './assets/人物_2.webp'
 import character from './assets/人物_1.webp'
+import gallerySource from './assets/gallery-source.jpg'
+import { galleryItems } from './gallery-data'
+import { policies } from './policies'
+import { youtubeShorts } from './youtube-shorts'
 
 const menuOpen = ref(false)
 const activeDistrict = ref('土城')
@@ -10,43 +14,9 @@ const navItems = [
   { label: '認識亞倫', href: '#about' },
   { label: '四大政見', href: '#policies' },
   { label: '在地行動', href: '#local' },
+  { label: '照片牆', href: 'gallery.html' },
   { label: '最新影音', href: '#videos' },
   { label: '最新行程', href: '#events' },
-]
-
-const policies = [
-  {
-    id: '01',
-    short: '住得安心',
-    title: '社會住宅興建\n落實居住正義',
-    description: '盤點四區可興建社宅用地，優先推動捷運周邊與重點生活圈供給，讓安居不再只是口號。',
-    icon: 'home',
-    tone: 'cyan',
-  },
-  {
-    id: '02',
-    short: '育兒有支持',
-    title: '育兒減少工時\n打造友善職場',
-    description: '推動彈性工時與支持措施，讓年輕家庭能兼顧工作、收入與陪伴孩子的時間。',
-    icon: 'family',
-    tone: 'yellow',
-  },
-  {
-    id: '03',
-    short: '騎得更安全',
-    title: '自行車通勤\n串聯轉乘路網',
-    description: '串聯捷運、火車站與生活圈，改善停車設施與人車分流，讓自行車成為可靠的通勤選擇。',
-    icon: 'bike',
-    tone: 'mint',
-  },
-  {
-    id: '04',
-    short: '道路更安心',
-    title: '交通罰款專用\n改善道路安全',
-    description: '罰款收入優先投入危險路口、標線標誌與行人設施，把每一筆罰款真正用回道路安全。',
-    icon: 'road',
-    tone: 'coral',
-  },
 ]
 
 const localActions = {
@@ -72,27 +42,6 @@ const localActions = {
   },
 }
 
-const videos = [
-  {
-    category: '地方行動',
-    title: '選戰倒數！吳姐姐繼續拚戰，今晚來到樹林',
-    views: '1.2 萬次觀看',
-    id: 'JU_8fHStoRU',
-  },
-  {
-    category: '政策主張',
-    title: '生養無懼！政府可以帶頭減工時',
-    views: '4,269 次觀看',
-    id: 'lc35JJrP5lw',
-  },
-  {
-    category: '吳姐姐日常',
-    title: '今天的任務是服裝搭配！？',
-    views: '5,056 次觀看',
-    id: 'xmXikpni-4k',
-  },
-]
-
 const events = [
   {
     day: '05',
@@ -113,6 +62,37 @@ const events = [
     district: '鶯歌',
   },
 ]
+
+function pickRandomItems(items, count) {
+  const shuffled = [...items]
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1))
+    ;[shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]]
+  }
+  return shuffled.slice(0, count)
+}
+
+const featuredGalleryItems = pickRandomItems(galleryItems, 4)
+
+function formatViewCount(viewCount) {
+  return `${new Intl.NumberFormat('zh-TW').format(viewCount)} 次觀看`
+}
+
+function pickRecentShorts(items, count) {
+  const cutoff = new Date()
+  cutoff.setMonth(cutoff.getMonth() - 2)
+
+  const sortedItems = [...items].sort((first, second) => new Date(second.publishedAt) - new Date(first.publishedAt))
+  const recentItems = sortedItems.filter((video) => new Date(video.publishedAt) >= cutoff)
+
+  return pickRandomItems(recentItems, count).map((video) => ({
+    ...video,
+    viewsLabel: formatViewCount(video.views),
+    thumbnail: `https://i.ytimg.com/vi/${video.id}/frame0.jpg`,
+  }))
+}
+
+const videos = pickRecentShorts(youtubeShorts, 3)
 
 let observer
 
@@ -200,7 +180,7 @@ function closeMenu() {
     </header>
 
     <main id="main">
-      <section id="top" class="hero" aria-labelledby="hero-title">
+      <section id="top" class="hero" aria-label="吳亞倫候選人介紹">
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
         <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
@@ -211,7 +191,7 @@ function closeMenu() {
               <span class="pulse-dot"></span>
               新北市議員參選人
             </p>
-            <h1 id="hero-title" class="hero-animate hero-delay-2">
+            <h1 class="hero-animate hero-delay-2">
               <span class="name">吳亞倫</span>
               <span class="nickname">吳姐姐</span>
             </h1>
@@ -252,6 +232,41 @@ function closeMenu() {
                 <circle cx="12" cy="10" r="2" />
               </svg>
               <span>深耕<br /><strong>土樹三鶯</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-hero-content">
+          <p class="hero-eyebrow hero-animate hero-delay-1">
+            <span class="pulse-dot"></span>
+            新北市議員參選人
+          </p>
+          <h1 class="hero-animate hero-delay-2">
+            <span class="name">吳亞倫</span>
+            <span class="nickname">吳姐姐</span>
+          </h1>
+          <div class="slogan hero-animate hero-delay-3">
+            <span>新人新氣象</span>
+            <strong>服務有力量<span class="slogan-mark">！</span></strong>
+          </div>
+          <p class="mobile-hero-lead hero-animate hero-delay-4">
+            從居住正義、育兒支持到安全交通，把市民每天遇到的問題，變成市政真正要解決的事。
+          </p>
+          <div class="hero-actions hero-animate hero-delay-5">
+            <a class="button button-primary" href="#policies">
+              看四大政見
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+            <a class="button button-ghost" href="#action">加入吳姐姐</a>
+          </div>
+          <div class="mobile-hero-stage hero-animate hero-delay-5">
+            <div class="mobile-districts">
+              <span>服務選區</span>
+              <strong>土城・樹林<br />三峽・鶯歌</strong>
+            </div>
+            <div class="mobile-portrait-frame">
+              <div class="mobile-portrait-ring" aria-hidden="true"></div>
+              <img :src="portrait" alt="吳亞倫微笑形象照" />
             </div>
           </div>
         </div>
@@ -304,7 +319,7 @@ function closeMenu() {
             <span class="policy-short">{{ policy.short }}</span>
             <h3>{{ policy.title }}</h3>
             <p>{{ policy.description }}</p>
-            <a href="#action" class="text-link">
+            <a :href="`policy.html?id=${policy.slug}`" class="text-link" :aria-label="`深入了解：${policy.short}`">
               我想了解
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
@@ -363,6 +378,47 @@ function closeMenu() {
             <div class="visual-stamp"><strong>在地</strong><span>新人</span></div>
           </div>
         </div>
+
+        <div class="local-gallery" data-reveal>
+          <div class="local-gallery-heading">
+            <div>
+              <p class="section-kicker light">RECENT MOMENTS</p>
+              <h3>近期行動現場</h3>
+            </div>
+            <div class="local-gallery-intro">
+              <p>每一次握手、每一段交談，都是理解地方的開始。這裡隨機精選近期走訪紀錄。</p>
+              <a class="text-link local-gallery-link" href="gallery.html">
+                瀏覽完整照片牆
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="local-gallery-grid">
+            <a
+              v-for="photo in featuredGalleryItems"
+              :key="photo.id"
+              class="local-gallery-card"
+              href="gallery.html"
+              :aria-label="`${photo.title}，前往完整照片牆`"
+            >
+              <div
+                class="local-gallery-photo"
+                :style="{
+                  backgroundImage: `url(${gallerySource})`,
+                  '--photo-x': photo.x,
+                  '--photo-y': photo.y,
+                }"
+                role="img"
+                :aria-label="photo.title"
+              ></div>
+              <div class="local-gallery-meta">
+                <span>{{ photo.district }}</span>
+                <strong>{{ photo.title }}</strong>
+              </div>
+            </a>
+          </div>
+        </div>
       </section>
 
       <section id="about" class="section about-section">
@@ -417,7 +473,7 @@ function closeMenu() {
             :style="{ '--delay': `${index * 100}ms` }"
           >
             <div class="video-image">
-              <img :src="`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`" :alt="video.title" loading="lazy" />
+              <img :src="video.thumbnail" :alt="video.title" loading="lazy" />
               <span class="play-button" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="m9 7 8 5-8 5V7Z" /></svg>
               </span>
@@ -425,7 +481,7 @@ function closeMenu() {
             </div>
             <div class="video-meta">
               <h3>{{ video.title }}</h3>
-              <span>{{ video.views }}</span>
+              <span>{{ video.viewsLabel }}</span>
             </div>
           </a>
         </div>
@@ -516,6 +572,7 @@ function closeMenu() {
         <div><strong>吳亞倫・吳姐姐</strong><small>新人新氣象，服務有力量</small></div>
       </div>
       <div class="footer-links">
+        <a href="gallery.html">照片牆</a>
         <a href="https://www.facebook.com/profile.php?id=61584383458056" target="_blank" rel="noopener noreferrer">Facebook</a>
         <a href="https://www.youtube.com/@wuyalun1209" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="mailto:tppsanying@gmail.com">聯絡團隊</a>
