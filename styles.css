@@ -136,7 +136,7 @@ li,
 }
 
 .button:focus-visible {
-  outline: 3px solid rgba(143, 95, 69, 0.28);
+  outline: 3px solid var(--accent-dark);
   outline-offset: 3px;
 }
 
