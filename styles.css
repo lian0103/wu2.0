@@ -28,6 +28,12 @@ a {
   color: inherit;
 }
 
+a:focus-visible {
+  outline: 3px solid var(--accent-dark);
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+
 .page {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
@@ -100,7 +106,8 @@ li,
   font-size: 1.1rem;
 }
 
-.contact-note {
+.contact-note,
+.status-pill {
   display: inline-flex;
   align-items: center;
   min-height: 48px;
