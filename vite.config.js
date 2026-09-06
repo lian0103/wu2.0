@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
-  base: '/wu2.0/',
+  base: '/',
   plugins: [vue()],
   build: {
     rollupOptions: {
