@@ -1,4 +1,4 @@
-export const youtubeShortsUpdatedAt = '2026-09-04T20:32:00+08:00'
+export const youtubeShortsUpdatedAt = '2026-09-06T08:30:00+08:00'
 
 // 此清單取自 YouTube 頻道公開摘要。日後排程只需更新這個檔案。
 export const youtubeShorts = [
@@ -7,35 +7,35 @@ export const youtubeShorts = [
     category: '地方行動',
     title: '夜騎隊熱血應援！樹林區的選擇，懇請支持吳亞倫',
     publishedAt: '2026-09-02T15:27:59+00:00',
-    views: 1564,
+    views: 1571,
   },
   {
     id: 'NHEXVTId584',
     category: '選戰行動',
     title: '台灣的選擇，土樹三鶯的選擇是吳亞倫',
     publishedAt: '2026-08-28T15:21:04+00:00',
-    views: 3187,
+    views: 3206,
   },
   {
     id: 'lHdufmlX3fY',
     category: '政策主張',
     title: '誰是任內興辦社宅最多的市長？社宅政策要持續努力',
     publishedAt: '2026-08-27T11:44:44+00:00',
-    views: 1947,
+    views: 1953,
   },
   {
     id: 'etGbAH9ucgg',
     category: '地方議題',
     title: '北大特區要不要設吸菸室？吳姐姐聽你說',
     publishedAt: '2026-08-20T15:37:23+00:00',
-    views: 1691,
+    views: 1693,
   },
   {
     id: '-h4AXa8JZmU',
     category: '地方行動',
     title: '鄰里嗡嗡嗡，一步一腳印',
     publishedAt: '2026-08-18T16:31:07+00:00',
-    views: 1305,
+    views: 1306,
   },
   {
     id: 'zNGUyxbKjQ4',
