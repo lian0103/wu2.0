@@ -6,6 +6,7 @@ export default defineConfig({
   base: '/',
   plugins: [vue()],
   build: {
+    manifest: true,
     rollupOptions: {
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),

@@ -9,9 +9,21 @@ const currentIndex = policies.findIndex((item) => item.slug === policy.slug)
 const nextPolicy = computed(() => policies[(currentIndex + 1) % policies.length])
 
 onMounted(() => {
-  document.title = `${policy.short}｜${policy.title.replace('\n', '・')}｜吳亞倫・吳姐姐`
+  document.title = `${policy.short}｜${policy.title.replace('\n', '・')}｜吳亞倫官網`
   const description = document.querySelector('meta[name="description"]')
-  description?.setAttribute('content', policy.description)
+  const summary = `新北市議員參選人吳亞倫的${policy.short}政見。${policy.description}`
+  description?.setAttribute('content', summary)
+  const url = `https://wuyalun.org/policy.html?id=${policy.slug}`
+  const canonical = document.querySelector('link[rel="canonical"]') || document.createElement('link')
+  canonical.rel = 'canonical'
+  canonical.href = url
+  document.head.appendChild(canonical)
+  document.querySelector('meta[property="og:title"]')?.setAttribute('content', document.title)
+  document.querySelector('meta[property="og:description"]')?.setAttribute('content', summary)
+  const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta')
+  ogUrl.setAttribute('property', 'og:url')
+  ogUrl.setAttribute('content', url)
+  document.head.appendChild(ogUrl)
 })
 </script>
 
