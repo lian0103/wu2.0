@@ -1,4 +1,4 @@
-export const youtubeShortsUpdatedAt = '2026-09-06T08:30:00+08:00'
+export const youtubeShortsUpdatedAt = '2026-09-06T09:15:00+08:00'
 
 // 此清單取自 YouTube 頻道公開摘要。日後排程只需更新這個檔案。
 export const youtubeShorts = [
@@ -7,7 +7,7 @@ export const youtubeShorts = [
     category: '地方行動',
     title: '夜騎隊熱血應援！樹林區的選擇，懇請支持吳亞倫',
     publishedAt: '2026-09-02T15:27:59+00:00',
-    views: 1571,
+    views: 1570,
   },
   {
     id: 'NHEXVTId584',
