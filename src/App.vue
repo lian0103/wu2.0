@@ -395,7 +395,9 @@ function closeMenu() {
               <div
                 class="local-gallery-photo"
                 :style="{
-                  backgroundImage: `url(${gallerySource})`,
+                  backgroundImage: `url(${photo.image || gallerySource})`,
+                  backgroundSize: photo.image ? 'cover' : undefined,
+                  backgroundPosition: photo.image ? 'center' : undefined,
                   '--photo-x': photo.x,
                   '--photo-y': photo.y,
                 }"

@@ -61,7 +61,7 @@ function showMorePhotos() {
             v-for="(photo, index) in visiblePhotos"
             :key="photo.id"
             class="gallery-card"
-            :href="facebookPhotosUrl"
+            :href="photo.url || facebookPhotosUrl"
             target="_blank"
             rel="noopener noreferrer"
             :aria-label="`${photo.title}，前往 Facebook 查看照片`"
@@ -69,7 +69,9 @@ function showMorePhotos() {
             <div
               class="gallery-photo"
               :style="{
-                backgroundImage: `url(${gallerySource})`,
+                backgroundImage: `url(${photo.image || gallerySource})`,
+                backgroundSize: photo.image ? 'cover' : undefined,
+                backgroundPosition: photo.image ? 'center' : undefined,
                 '--photo-x': photo.x,
                 '--photo-y': photo.y,
               }"
