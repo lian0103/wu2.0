@@ -1,10 +1,17 @@
 <script setup>
 import { computed, onMounted } from 'vue'
 import character from './assets/人物_1.webp'
+import { trackEvent } from './analytics'
 import { getPolicy, policies } from './policies'
 
-const requestedSlug = new URLSearchParams(window.location.search).get('id')
-const policy = getPolicy(requestedSlug)
+const props = defineProps({
+  policySlug: {
+    type: String,
+    default: '',
+  },
+})
+
+const policy = getPolicy(props.policySlug)
 const currentIndex = policies.findIndex((item) => item.slug === policy.slug)
 const nextPolicy = computed(() => policies[(currentIndex + 1) % policies.length])
 
@@ -13,7 +20,7 @@ onMounted(() => {
   const description = document.querySelector('meta[name="description"]')
   const summary = `新北市議員參選人吳亞倫的${policy.short}政見。${policy.description}`
   description?.setAttribute('content', summary)
-  const url = `https://wuyalun.org/policy.html?id=${policy.slug}`
+  const url = `https://wuyalun.org/policies/${policy.slug}/`
   const canonical = document.querySelector('link[rel="canonical"]') || document.createElement('link')
   canonical.rel = 'canonical'
   canonical.href = url
@@ -24,6 +31,11 @@ onMounted(() => {
   ogUrl.setAttribute('property', 'og:url')
   ogUrl.setAttribute('content', url)
   document.head.appendChild(ogUrl)
+
+  trackEvent('policy_view', {
+    content_id: policy.slug,
+    content_name: policy.short,
+  })
 })
 </script>
 
@@ -32,7 +44,7 @@ onMounted(() => {
     <a class="skip-link" href="#policy-main">跳至主要內容</a>
 
     <header class="policy-header">
-      <a class="brand" href="./" aria-label="回到吳亞倫首頁">
+      <a class="brand" href="/" aria-label="回到吳亞倫首頁">
         <span class="brand-mark">吳</span>
         <span class="brand-copy">
           <strong>吳亞倫</strong>
@@ -40,8 +52,8 @@ onMounted(() => {
         </span>
       </a>
       <nav aria-label="政見頁導覽">
-        <a href="./#policies">四大政見</a>
-        <a class="policy-header-action" href="./#action">加入我們</a>
+        <a href="/#policies">四大政見</a>
+        <a class="policy-header-action" href="/#action" data-track-event="join_navigation" data-track-location="policy_header">加入我們</a>
       </nav>
     </header>
 
@@ -50,7 +62,7 @@ onMounted(() => {
         <div class="policy-hero-grid" aria-hidden="true"></div>
         <div class="policy-hero-inner">
           <div class="policy-hero-copy">
-            <a class="policy-back" href="./#policies">
+            <a class="policy-back" href="/#policies">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6" /></svg>
               回到四大政見
             </a>
@@ -134,7 +146,14 @@ onMounted(() => {
           <p>NEXT POLICY</p>
           <span>{{ nextPolicy.short }}</span>
           <h2>{{ nextPolicy.title }}</h2>
-          <a class="button button-light" :href="`policy.html?id=${nextPolicy.slug}`">
+          <a
+            class="button button-light"
+            :href="`/policies/${nextPolicy.slug}/`"
+            data-track-event="policy_click"
+            data-track-location="policy_next"
+            :data-track-id="nextPolicy.slug"
+            :data-track-label="nextPolicy.short"
+          >
             看下一項政見
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
           </a>
@@ -144,14 +163,14 @@ onMounted(() => {
     </main>
 
     <footer class="policy-footer">
-      <a href="./">吳亞倫・吳姐姐</a>
+      <a href="/">吳亞倫・吳姐姐</a>
       <span>新人新氣象，服務有力量</span>
     </footer>
 
     <nav class="mobile-actions" aria-label="手機快速行動">
-      <a href="./#policies">四大政見</a>
-      <a href="./#action">加入我們</a>
-      <a href="https://donate.tpp.org.tw/support/MGHnhwbm" target="_blank" rel="noopener noreferrer">小額捐款</a>
+      <a href="/#policies">四大政見</a>
+      <a href="/#action" data-track-event="join_navigation" data-track-location="policy_mobile_bar">加入我們</a>
+      <a href="https://donate.tpp.org.tw/support/MGHnhwbm" target="_blank" rel="noopener noreferrer" data-track-event="donate_click" data-track-location="policy_mobile_bar">小額捐款</a>
     </nav>
   </div>
 </template>

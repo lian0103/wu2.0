@@ -22,7 +22,7 @@ function showMorePhotos() {
       </a>
       <nav aria-label="照片牆導覽">
         <a href="./#events">最新行程</a>
-        <a class="gallery-header-action" href="./#action">加入我們</a>
+        <a class="gallery-header-action" href="./#action" data-track-event="join_navigation" data-track-location="gallery_header">加入我們</a>
       </nav>
     </header>
 
@@ -42,7 +42,7 @@ function showMorePhotos() {
               查看最新照片
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-6-6 6 6 6-6" /></svg>
             </a>
-            <a :href="facebookPhotosUrl" target="_blank" rel="noopener noreferrer">前往 Facebook 看全部</a>
+            <a :href="facebookPhotosUrl" target="_blank" rel="noopener noreferrer" data-track-event="facebook_outbound" data-track-location="gallery_hero">前往 Facebook 看全部</a>
           </div>
         </div>
       </section>
@@ -65,6 +65,10 @@ function showMorePhotos() {
             target="_blank"
             rel="noopener noreferrer"
             :aria-label="`${photo.title}，前往 Facebook 查看照片`"
+            data-track-event="gallery_photo_click"
+            data-track-location="gallery_wall"
+            :data-track-id="photo.id"
+            :data-track-label="photo.title"
           >
             <div
               class="gallery-photo"
@@ -86,7 +90,13 @@ function showMorePhotos() {
         </div>
 
         <div class="gallery-load-more">
-          <button v-if="visibleCount < galleryItems.length" type="button" @click="showMorePhotos">載入更多照片</button>
+          <button
+            v-if="visibleCount < galleryItems.length"
+            type="button"
+            data-track-event="gallery_load_more"
+            data-track-location="gallery_wall"
+            @click="showMorePhotos"
+          >載入更多照片</button>
           <span>目前顯示 {{ visiblePhotos.length }}／{{ galleryItems.length }} 則</span>
         </div>
       </section>
@@ -94,7 +104,7 @@ function showMorePhotos() {
       <section class="gallery-cta">
         <p>想即時掌握下一站？</p>
         <h2>追蹤吳姐姐，<br />一起走進地方日常。</h2>
-        <a :href="facebookPhotosUrl" target="_blank" rel="noopener noreferrer">追蹤 Facebook</a>
+        <a :href="facebookPhotosUrl" target="_blank" rel="noopener noreferrer" data-track-event="facebook_outbound" data-track-location="gallery_cta">追蹤 Facebook</a>
       </section>
     </main>
 
@@ -104,9 +114,9 @@ function showMorePhotos() {
     </footer>
 
     <nav class="mobile-actions" aria-label="手機快速行動">
-      <a href="./#policies">看政見</a>
-      <a href="./#action">加入我們</a>
-      <a href="https://donate.tpp.org.tw/support/MGHnhwbm" target="_blank" rel="noopener noreferrer">小額捐款</a>
+      <a href="./#policies" data-track-event="policy_click" data-track-location="gallery_mobile_bar" data-track-id="overview">看政見</a>
+      <a href="./#action" data-track-event="join_navigation" data-track-location="gallery_mobile_bar">加入我們</a>
+      <a href="https://donate.tpp.org.tw/support/MGHnhwbm" target="_blank" rel="noopener noreferrer" data-track-event="donate_click" data-track-location="gallery_mobile_bar">小額捐款</a>
     </nav>
   </div>
 </template>

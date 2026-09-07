@@ -3,6 +3,7 @@ import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import portrait from './assets/人物_2.webp'
 import character from './assets/人物_1.webp'
 import gallerySource from './assets/gallery-source.jpg'
+import { events, groupEventsByDate } from './events'
 import { galleryItems } from './gallery-data'
 import { policies } from './policies'
 import { youtubeShorts } from './youtube-shorts'
@@ -42,26 +43,9 @@ const localActions = {
   },
 }
 
-const events = [
-  {
-    day: '05',
-    month: 'SEP',
-    weekday: '週六',
-    title: '好骨力・一起逛市場',
-    place: '三峽市場',
-    time: '上午 09:00',
-    district: '三峽',
-  },
-  {
-    day: '06',
-    month: 'SEP',
-    weekday: '週日',
-    title: '好骨力・一起逛市場',
-    place: '鶯歌市場',
-    time: '上午 09:00',
-    district: '鶯歌',
-  },
-]
+const eventGroups = groupEventsByDate(events)
+const showingUpcomingEvents = eventGroups.upcoming.length > 0
+const visibleEvents = (showingUpcomingEvents ? eventGroups.upcoming : eventGroups.past).slice(0, 3)
 
 const featuredGalleryItems = galleryItems.slice(0, 3)
 
@@ -157,12 +141,14 @@ function closeMenu() {
         <a v-for="item in navItems" :key="item.href" :href="item.href" @click="closeMenu">
           {{ item.label }}
         </a>
-        <a class="nav-action nav-join" href="#action" @click="closeMenu">加入我們</a>
+        <a class="nav-action nav-join" href="#action" data-track-event="join_navigation" data-track-location="header" @click="closeMenu">加入我們</a>
         <a
           class="nav-action nav-donate"
           href="https://donate.tpp.org.tw/support/MGHnhwbm"
           target="_blank"
           rel="noopener noreferrer"
+          data-track-event="donate_click"
+          data-track-location="header"
         >
           小額捐款
         </a>
@@ -194,13 +180,13 @@ function closeMenu() {
               把市民每天遇到的問題，變成市政真正要解決的事。
             </p>
             <div class="hero-actions hero-animate hero-delay-5">
-              <a class="button button-primary" href="#policies">
+              <a class="button button-primary" href="#policies" data-track-event="policy_click" data-track-location="hero" data-track-id="overview">
                 看四大政見
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
               </a>
-              <a class="button button-ghost" href="#action">加入吳姐姐</a>
+              <a class="button button-ghost" href="#action" data-track-event="join_navigation" data-track-location="hero">加入吳姐姐</a>
             </div>
             <div class="districts hero-animate hero-delay-6" aria-label="服務地區">
               <span>土城</span><i></i><span>樹林</span><i></i><span>三峽</span><i></i><span>鶯歌</span>
@@ -243,11 +229,11 @@ function closeMenu() {
             從居住正義、育兒支持到安全交通，把市民每天遇到的問題，變成市政真正要解決的事。
           </p>
           <div class="hero-actions hero-animate hero-delay-5">
-            <a class="button button-primary" href="#policies">
+            <a class="button button-primary" href="#policies" data-track-event="policy_click" data-track-location="mobile_hero" data-track-id="overview">
               看四大政見
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
-            <a class="button button-ghost" href="#action">加入吳姐姐</a>
+            <a class="button button-ghost" href="#action" data-track-event="join_navigation" data-track-location="mobile_hero">加入吳姐姐</a>
           </div>
           <div class="mobile-hero-stage hero-animate hero-delay-5">
             <div class="mobile-districts">
@@ -309,7 +295,15 @@ function closeMenu() {
             <span class="policy-short">{{ policy.short }}</span>
             <h3>{{ policy.title }}</h3>
             <p>{{ policy.description }}</p>
-            <a :href="`policy.html?id=${policy.slug}`" class="text-link" :aria-label="`深入了解：${policy.short}`">
+            <a
+              :href="`/policies/${policy.slug}/`"
+              class="text-link"
+              :aria-label="`深入了解：${policy.short}`"
+              data-track-event="policy_click"
+              data-track-location="policy_grid"
+              :data-track-id="policy.slug"
+              :data-track-label="policy.short"
+            >
               我想了解
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
@@ -332,6 +326,10 @@ function closeMenu() {
                 role="tab"
                 :aria-selected="activeDistrict === district"
                 :class="{ active: activeDistrict === district }"
+                data-track-event="district_select"
+                data-track-location="local_actions"
+                :data-track-id="district"
+                :data-track-label="district"
                 @click="activeDistrict = district"
               >
                 {{ district }}
@@ -377,7 +375,7 @@ function closeMenu() {
             </div>
             <div class="local-gallery-intro">
               <p>每一次握手、每一段交談，都是理解地方的開始。這裡依更新時間呈現最新走訪紀錄。</p>
-              <a class="text-link local-gallery-link" href="gallery.html">
+              <a class="text-link local-gallery-link" href="gallery.html" data-track-event="gallery_click" data-track-location="home_gallery_heading">
                 瀏覽完整照片牆
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </a>
@@ -391,6 +389,10 @@ function closeMenu() {
               class="local-gallery-card"
               href="gallery.html"
               :aria-label="`${photo.title}，前往完整照片牆`"
+              data-track-event="gallery_click"
+              data-track-location="home_gallery_card"
+              :data-track-id="photo.id"
+              :data-track-label="photo.title"
             >
               <div
                 class="local-gallery-photo"
@@ -447,6 +449,8 @@ function closeMenu() {
             href="https://www.youtube.com/@wuyalun1209/shorts"
             target="_blank"
             rel="noopener noreferrer"
+            data-track-event="youtube_outbound"
+            data-track-location="videos_heading"
           >
             前往 YouTube
           </a>
@@ -474,7 +478,15 @@ function closeMenu() {
               <h3>{{ video.title }}</h3>
               <div>
                 <span>{{ video.viewsLabel }}</span>
-                <a :href="`https://www.youtube.com/shorts/${video.id}`" target="_blank" rel="noopener noreferrer">YouTube 開啟</a>
+                <a
+                  :href="`https://www.youtube.com/shorts/${video.id}`"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-track-event="youtube_outbound"
+                  data-track-location="video_card"
+                  :data-track-id="video.id"
+                  :data-track-label="video.title"
+                >YouTube 開啟</a>
               </div>
             </div>
           </article>
@@ -485,13 +497,17 @@ function closeMenu() {
         <div class="events-layout">
           <div class="events-heading" data-reveal>
             <p class="section-kicker">MEET US</p>
-            <h2>下一站，<br /><em>市場見！</em></h2>
-            <p>來打聲招呼、聊聊你所在意的地方大小事。每一個聲音，亞倫都想親自聽見。</p>
+            <h2 v-if="showingUpcomingEvents">下一站，<br /><em>市場見！</em></h2>
+            <h2 v-else>近期活動，<br /><em>一起回顧！</em></h2>
+            <p v-if="showingUpcomingEvents">來打聲招呼、聊聊你所在意的地方大小事。每一個聲音，亞倫都想親自聽見。</p>
+            <p v-else>目前已公布的行程都順利完成。追蹤 Facebook，第一時間掌握下一站的時間與地點。</p>
             <a
               class="text-link large"
               href="https://www.facebook.com/profile.php?id=61584383458056"
               target="_blank"
               rel="noopener noreferrer"
+              data-track-event="facebook_outbound"
+              data-track-location="events_heading"
             >
               追蹤最新行程
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
@@ -499,13 +515,13 @@ function closeMenu() {
           </div>
 
           <div class="event-list">
-            <article v-for="(event, index) in events" :key="event.place" class="event-card" data-reveal :style="{ '--delay': `${index * 110}ms` }">
+            <article v-for="(event, index) in visibleEvents" :key="event.id" class="event-card" data-reveal :style="{ '--delay': `${index * 110}ms` }">
               <div class="event-date">
                 <span>{{ event.month }}</span>
                 <strong>{{ event.day }}</strong>
               </div>
               <div class="event-info">
-                <span class="event-district">{{ event.district }}・{{ event.weekday }}</span>
+                <span class="event-district">{{ event.status === 'past' ? '活動回顧・' : '' }}{{ event.district }}・{{ event.weekday }}</span>
                 <h3>{{ event.title }}</h3>
                 <p>
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z" /><circle cx="12" cy="10" r="2" /></svg>
@@ -513,10 +529,14 @@ function closeMenu() {
                 </p>
               </div>
               <a
-                href="https://www.facebook.com/profile.php?id=61584383458056"
+                :href="event.sourceUrl"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="查看活動詳情"
+                data-track-event="event_click"
+                data-track-location="event_card"
+                :data-track-id="event.id"
+                :data-track-label="event.title"
               >
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </a>
@@ -538,6 +558,8 @@ function closeMenu() {
                 href="https://line.me/ti/g2/DG8AWz6XYx1T4QOzjQYkduMy-u5ZuerKI6Rb9g"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track-event="volunteer_click"
+                data-track-location="action_section"
               >
                 加入志工夥伴
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
@@ -547,6 +569,8 @@ function closeMenu() {
                 href="https://donate.tpp.org.tw/support/MGHnhwbm"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track-event="donate_click"
+                data-track-location="action_section"
               >
                 小額支持
               </a>
@@ -568,7 +592,7 @@ function closeMenu() {
         </div>
 
         <div class="footer-contact">
-          <a class="footer-contact-card" href="mailto:tppsanying@gmail.com">
+          <a class="footer-contact-card" href="mailto:tppsanying@gmail.com" data-track-event="contact_click" data-track-location="footer">
             <span class="footer-contact-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 7l9 7 9-7" /></svg>
             </span>
@@ -584,6 +608,8 @@ function closeMenu() {
             href="https://maps.app.goo.gl/Yc6FjV2raULmgK2Q6"
             target="_blank"
             rel="noopener noreferrer"
+            data-track-event="directions_click"
+            data-track-location="footer"
           >
             <span class="footer-contact-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z" /><circle cx="12" cy="9" r="2.4" /></svg>
@@ -599,18 +625,18 @@ function closeMenu() {
 
       <div class="footer-meta">
         <div class="footer-links">
-          <a href="gallery.html">照片牆</a>
-          <a href="https://www.facebook.com/profile.php?id=61584383458056" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://www.youtube.com/@wuyalun1209" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="gallery.html" data-track-event="gallery_click" data-track-location="footer">照片牆</a>
+          <a href="https://www.facebook.com/profile.php?id=61584383458056" target="_blank" rel="noopener noreferrer" data-track-event="facebook_outbound" data-track-location="footer">Facebook</a>
+          <a href="https://www.youtube.com/@wuyalun1209" target="_blank" rel="noopener noreferrer" data-track-event="youtube_outbound" data-track-location="footer">YouTube</a>
         </div>
         <p>2026 吳亞倫／吳姐姐競選志工團隊</p>
       </div>
     </footer>
 
     <nav class="mobile-actions" aria-label="手機快速行動">
-      <a href="#policies">看政見</a>
-      <a href="#action">加入我們</a>
-      <a href="https://donate.tpp.org.tw/support/MGHnhwbm" target="_blank" rel="noopener noreferrer">小額捐款</a>
+      <a href="#policies" data-track-event="policy_click" data-track-location="mobile_bar" data-track-id="overview">看政見</a>
+      <a href="#action" data-track-event="join_navigation" data-track-location="mobile_bar">加入我們</a>
+      <a href="https://donate.tpp.org.tw/support/MGHnhwbm" target="_blank" rel="noopener noreferrer" data-track-event="donate_click" data-track-location="mobile_bar">小額捐款</a>
     </nav>
   </div>
 </template>
