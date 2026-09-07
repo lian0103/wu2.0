@@ -26,28 +26,28 @@ const localActions = {
     headline: '從捷運站到鄰里街道，讓更多土城朋友認識亞倫',
     copy: '用一聲聲問候主動介紹自己，從每一次握手與交談開始，讓新人吳亞倫一步步走進土城鄉親的日常。',
     tags: ['海山捷運站', '鄰里街道'],
-    liveNote: '捷運站・鄰里街道..',
+    liveNote: '從捷運站走進鄰里街道，和土城朋友面對面問候、傾聽日常。',
     marker: { x: 66, y: 31 },
   },
   樹林: {
     headline: '一步一腳印，和樹林鄉親面對面交朋友',
     copy: '從樹林車站、長壽公園到博愛早市，走進人群、親切互動，用真誠累積熟悉感，也爭取每一份支持。',
     tags: ['樹林車站', '長壽公園', '博愛早市'],
-    liveNote: '車站・公園・早市..',
+    liveNote: '走訪車站、公園與早市，在每一次相遇中認識樹林的地方大小事。',
     marker: { x: 31, y: 30 },
   },
   三峽: {
     headline: '走進三峽日常，讓新人被看見、被認識',
     copy: '勤走北大特區、公有市場與鄰里活動，主動向三峽朋友介紹亞倫，也用每一次相遇拉近彼此的距離。',
     tags: ['北大特區', '三峽市場', '鄰里走訪'],
-    liveNote: '北大特區・三峽市場..',
+    liveNote: '深入北大特區與三峽市場，聽見居民關心的生活需求與期待。',
     marker: { x: 64, y: 69 },
   },
   鶯歌: {
     headline: '持續走訪，成為鶯歌鄉親熟悉的新面孔',
     copy: '從鶯歌車站到二橋、大湖等社區，帶著笑容主動問候，讓更多朋友認識吳姐姐，也認識這份服務地方的初心。',
     tags: ['鶯歌車站', '鳳鳴車站', '尖山二橋'],
-    liveNote: '車站・鳳鳴・尖山..',
+    liveNote: '從鶯歌、鳳鳴車站走到尖山二橋，持續累積熟悉、信任與支持。',
     marker: { x: 31, y: 68 },
   },
 }
@@ -63,6 +63,8 @@ const activeMapAction = computed(() => localActions[activeDistrict.value])
 const activeMapStyle = computed(() => ({
   '--spot-x': `${activeMapAction.value.marker.x}%`,
   '--spot-y': `${activeMapAction.value.marker.y}%`,
+  '--mobile-spot-x': `${activeMapAction.value.marker.x * 2.4}px`,
+  '--mobile-spot-y': `${12 + activeMapAction.value.marker.y * 2.09}px`,
 }))
 
 const eventGroups = groupEventsByDate(events)

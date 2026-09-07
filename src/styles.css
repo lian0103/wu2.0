@@ -2105,6 +2105,16 @@ svg {
   to { opacity: 1; transform: translateY(0) rotate(-2deg); }
 }
 
+@keyframes mobile-broadcast-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mobile-map-word-in {
+  from { opacity: 0; transform: translateX(18px) scale(0.96); }
+  to { opacity: 0.96; transform: translateX(0) scale(1); }
+}
+
 @keyframes panel-in {
   from { opacity: 0; transform: translateX(-12px); }
   to { opacity: 1; transform: translateX(0); }
@@ -2632,16 +2642,25 @@ svg {
   }
 
   .local-copy {
-    padding: 75px 18px 45px;
+    padding: 28px 18px 0;
   }
 
+  .local-layout {
+    min-height: 0;
+    padding-bottom: 24px;
+  }
+
+  .local-copy .section-kicker { margin-bottom: 10px; }
+  .local-copy h2 { font-size: 28px; line-height: 1.2; }
+
   .local-copy > p:not(.section-kicker) {
-    font-size: 15px;
+    display: none;
   }
 
   .district-tabs {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin: 18px 0 12px;
   }
 
   .district-tabs button {
@@ -2649,11 +2668,15 @@ svg {
   }
 
   .district-panel {
-    padding: 22px 18px;
+    display: none;
   }
 
   .local-visual {
-    min-height: 515px;
+    min-height: 0;
+    margin: 0 18px;
+    padding-top: 220px;
+    clip-path: none;
+    border-radius: 18px;
   }
 
   .local-gallery {
@@ -2692,26 +2715,37 @@ svg {
   }
 
   .local-visual > img {
-    right: -12%;
-    width: min(96vw, 460px);
+    right: -6px;
+    top: 22px;
+    bottom: auto;
+    width: 190px;
+    height: 198px;
+    object-fit: cover;
+    object-position: top;
   }
 
   .map-shape {
-    top: 44%;
-    width: 110vw;
+    top: 12px;
+    left: 0;
+    width: 240px;
+    transform: none;
   }
 
   .map-place-word {
-    top: 9%;
-    left: 5%;
-    font-size: clamp(70px, 24vw, 96px);
+    z-index: 3;
+    top: 16px;
+    left: 7%;
+    color: var(--white);
+    font-size: 40px;
+    letter-spacing: -0.09em;
+    opacity: 0.96;
+    text-shadow: 4px 5px 0 rgba(16, 47, 51, 0.82);
+    -webkit-text-stroke: 2px var(--ink);
+    animation-name: mobile-map-word-in;
   }
 
   .map-label {
-    width: 58px;
-    height: 58px;
-    font-size: 14px;
-    box-shadow: 4px 4px 0 var(--ink);
+    display: none;
   }
 
   .label-tucheng { top: 12%; left: 13%; }
@@ -2720,22 +2754,53 @@ svg {
   .label-yingge { right: 3%; bottom: 27%; }
 
   .map-broadcast-card {
-    top: min(calc(var(--spot-y) + 8%), 72%);
-    left: clamp(30%, calc(var(--spot-x) - 9%), calc(100% - 215px));
-    width: 190px;
-    padding: 12px 14px 13px;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 12px;
+    width: auto;
+    min-height: 112px;
+    padding: 14px;
+    border: 0;
+    border-radius: 0;
+    background: var(--white);
+    box-shadow: none;
+    animation-name: mobile-broadcast-in;
+  }
+
+  .broadcast-live {
+    grid-row: 1 / 3;
+    align-self: center;
+    margin: 0;
+    padding: 7px 9px;
+    writing-mode: vertical-rl;
   }
 
   .map-broadcast-card strong {
-    font-size: 20px;
+    align-self: end;
+    font-size: 21px;
+    line-height: 1.15;
+  }
+
+  .map-broadcast-card small {
+    align-self: start;
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 1.65;
   }
 
   .visual-stamp {
-    top: 49%;
-    left: 5%;
-    width: 82px;
-    height: 82px;
-    padding-top: 14px;
+    display: none;
+  }
+
+  .local-visual::after { display: none; }
+  .map-live-spot {
+    left: var(--mobile-spot-x);
+    top: var(--mobile-spot-y);
   }
 
   .visual-stamp strong { font-size: 21px; }
