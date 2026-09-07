@@ -1,5 +1,5 @@
 <script setup>
-import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import ElectionCountdown from './ElectionCountdown.vue'
 import portrait from './assets/人物_2.webp'
 import character from './assets/人物_1.webp'
@@ -26,23 +26,44 @@ const localActions = {
     headline: '從捷運站到鄰里街道，讓更多土城朋友認識亞倫',
     copy: '用一聲聲問候主動介紹自己，從每一次握手與交談開始，讓新人吳亞倫一步步走進土城鄉親的日常。',
     tags: ['海山捷運站', '鄰里街道'],
+    liveNote: '捷運站・鄰里街道..',
+    marker: { x: 66, y: 31 },
   },
   樹林: {
     headline: '一步一腳印，和樹林鄉親面對面交朋友',
     copy: '從樹林車站、長壽公園到博愛早市，走進人群、親切互動，用真誠累積熟悉感，也爭取每一份支持。',
     tags: ['樹林車站', '長壽公園', '博愛早市'],
+    liveNote: '車站・公園・早市..',
+    marker: { x: 31, y: 30 },
   },
   三峽: {
     headline: '走進三峽日常，讓新人被看見、被認識',
     copy: '勤走北大特區、公有市場與鄰里活動，主動向三峽朋友介紹亞倫，也用每一次相遇拉近彼此的距離。',
     tags: ['北大特區', '三峽市場', '鄰里走訪'],
+    liveNote: '北大特區・三峽市場..',
+    marker: { x: 64, y: 69 },
   },
   鶯歌: {
     headline: '持續走訪，成為鶯歌鄉親熟悉的新面孔',
     copy: '從鶯歌車站到二橋、大湖等社區，帶著笑容主動問候，讓更多朋友認識吳姐姐，也認識這份服務地方的初心。',
-    tags: ['鶯歌車站', '二橋社區', '大湖里'],
+    tags: ['鶯歌車站', '鳳鳴車站', '尖山二橋'],
+    liveNote: '車站・鳳鳴・尖山..',
+    marker: { x: 31, y: 68 },
   },
 }
+
+const mapDistricts = [
+  { name: '樹林', areaClass: 'area-1', labelClass: 'label-tucheng' },
+  { name: '土城', areaClass: 'area-2', labelClass: 'label-shulin' },
+  { name: '鶯歌', areaClass: 'area-3', labelClass: 'label-sanxia' },
+  { name: '三峽', areaClass: 'area-4', labelClass: 'label-yingge' },
+]
+
+const activeMapAction = computed(() => localActions[activeDistrict.value])
+const activeMapStyle = computed(() => ({
+  '--spot-x': `${activeMapAction.value.marker.x}%`,
+  '--spot-y': `${activeMapAction.value.marker.y}%`,
+}))
 
 const eventGroups = groupEventsByDate(events)
 const showingUpcomingEvents = eventGroups.upcoming.length > 0
@@ -348,22 +369,39 @@ function closeMenu() {
             </div>
           </div>
 
-          <div class="local-visual" data-reveal>
+          <div class="local-visual" :style="activeMapStyle" data-reveal>
+            <div class="map-place-word" :key="`word-${activeDistrict}`" aria-hidden="true">{{ activeDistrict }}</div>
             <div class="map-shape" aria-hidden="true">
               <svg viewBox="0 0 620 540">
-                <path class="map-area area-1" d="M96 108 222 47l112 72-31 120-146 12L75 190Z" />
-                <path class="map-area area-2" d="m334 119 133-55 96 103-61 116-199-44Z" />
-                <path class="map-area area-3" d="m157 251 146-12 78 103-50 142-174-23-83-124Z" />
-                <path class="map-area area-4" d="m303 239 199 44 39 126-210 75 50-142Z" />
-                <path class="route-line" d="M118 163c94-13 107 94 206 55s123 16 157 91-73 52-100 101-131-45-199-11" />
+                <path class="map-area area-1" :class="{ 'is-active': activeDistrict === '樹林' }" d="M96 108 222 47l112 72-31 120-146 12L75 190Z" />
+                <path class="map-area area-2" :class="{ 'is-active': activeDistrict === '土城' }" d="m334 119 133-55 96 103-61 116-199-44Z" />
+                <path class="map-area area-3" :class="{ 'is-active': activeDistrict === '鶯歌' }" d="m157 251 146-12 78 103-50 142-174-23-83-124Z" />
+                <path class="map-area area-4" :class="{ 'is-active': activeDistrict === '三峽' }" d="m303 239 199 44 39 126-210 75 50-142Z" />
+                <path :key="`route-${activeDistrict}`" class="route-line" d="M118 163c94-13 107 94 206 55s123 16 157 91-73 52-100 101-131-45-199-11" />
                 <circle cx="124" cy="163" r="9" /><circle cx="325" cy="218" r="9" />
                 <circle cx="480" cy="308" r="9" /><circle cx="183" cy="399" r="9" />
               </svg>
             </div>
-            <span class="map-label label-tucheng">樹林</span>
-            <span class="map-label label-shulin">土城</span>
-            <span class="map-label label-sanxia">鶯歌</span>
-            <span class="map-label label-yingge">三峽</span>
+
+            <button
+              v-for="district in mapDistricts"
+              :key="district.name"
+              class="map-label"
+              :class="[district.labelClass, { active: activeDistrict === district.name }]"
+              type="button"
+              :aria-label="`查看${district.name}走訪紀錄`"
+              :aria-pressed="activeDistrict === district.name"
+              @click="activeDistrict = district.name"
+            >
+              {{ district.name }}
+            </button>
+
+            <div class="map-live-spot" aria-hidden="true"><i></i><i></i><span></span></div>
+            <div class="map-broadcast-card" :key="`card-${activeDistrict}`" aria-live="polite">
+              <span class="broadcast-live"><i></i> LIVE WALK</span>
+              <strong>{{ activeDistrict }}走訪中</strong>
+              <small>{{ activeMapAction.liveNote }}</small>
+            </div>
             <img :src="character" alt="吳亞倫 Q 版人物舉拳向前" />
             <div class="visual-stamp"><strong>在地</strong><span>新人</span></div>
           </div>
