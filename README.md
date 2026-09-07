@@ -10,7 +10,7 @@ npm run dev
 npm run build
 ```
 
-正式建置會預渲染首頁、照片牆，以及 `/policies/:slug/` 四個政見頁。
+正式建置會預渲染首頁、個人介紹頁、照片牆，以及 `/policies/:slug/` 四個政見頁。
 
 ## 內容更新
 

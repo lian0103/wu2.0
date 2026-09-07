@@ -436,6 +436,10 @@ function closeMenu() {
               <div><strong>4<span>區</span></strong><small>深耕土樹三鶯</small></div>
             </div>
             <blockquote>「用雙腳走入基層，用理念贏得市民朋友的託付。」</blockquote>
+            <a class="text-link large" href="/about.html" data-track-event="about_click" data-track-location="home_about">
+              閱讀吳姐姐一路走來的故事
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
           </div>
         </div>
       </section>

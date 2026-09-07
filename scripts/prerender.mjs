@@ -77,6 +77,7 @@ async function writeRenderedPage({ server, sourcePath, outputPath = sourcePath, 
 const server = await createServer({ server: { middlewareMode: true, hmr: false, ws: false }, appType: 'custom' })
 try {
   await writeRenderedPage({ server, sourcePath: 'index.html', componentPath: '/src/App.vue' })
+  await writeRenderedPage({ server, sourcePath: 'about.html', componentPath: '/src/AboutApp.vue' })
   await writeRenderedPage({ server, sourcePath: 'gallery.html', componentPath: '/src/GalleryApp.vue' })
 
   for (const policy of policies) {
