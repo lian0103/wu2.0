@@ -1,5 +1,6 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import ElectionCountdown from './ElectionCountdown.vue'
 import portrait from './assets/人物_2.webp'
 import character from './assets/人物_1.webp'
 import gallerySource from './assets/gallery-source.jpg'
@@ -115,6 +116,7 @@ function closeMenu() {
 <template>
   <div class="site-shell">
     <a class="skip-link" href="#main">跳至主要內容</a>
+    <ElectionCountdown />
 
     <header class="site-header">
       <a href="#top" class="brand" aria-label="回到首頁" @click="closeMenu">

@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
+import ElectionCountdown from './ElectionCountdown.vue'
 import gallerySource from './assets/gallery-source.jpg'
 import { facebookPhotosUrl, galleryItems } from './gallery-data'
 
@@ -14,6 +15,7 @@ function showMorePhotos() {
 <template>
   <div class="gallery-page">
     <a class="skip-link" href="#gallery-main">跳至主要內容</a>
+    <ElectionCountdown />
 
     <header class="gallery-header">
       <a class="brand" href="./" aria-label="回到吳亞倫首頁">

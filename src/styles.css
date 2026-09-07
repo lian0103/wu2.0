@@ -1790,6 +1790,112 @@ svg {
   display: none;
 }
 
+.election-countdown {
+  position: fixed;
+  z-index: 90;
+  top: 50%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90px;
+  padding: 16px 10px 18px;
+  border: 1.5px solid var(--ink);
+  border-right: 0;
+  border-radius: 20px 0 0 20px;
+  background: rgba(250, 248, 242, 0.94);
+  box-shadow: -7px 7px 0 rgba(16, 47, 51, 0.14);
+  color: var(--ink);
+  pointer-events: none;
+  transform: translateY(-50%);
+  user-select: none;
+  backdrop-filter: blur(16px);
+}
+
+.election-countdown::before {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  width: 38px;
+  height: 5px;
+  border-radius: 0 0 4px 4px;
+  background: var(--yellow);
+  content: "";
+}
+
+.election-countdown-date,
+.election-countdown-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.election-countdown-date time {
+  font-family: Arial Black, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+
+.election-countdown-date small,
+.election-countdown-main > small {
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+}
+
+.election-countdown-date small {
+  margin-top: 1px;
+  color: var(--ink-soft);
+}
+
+.election-countdown-rule {
+  width: 46px;
+  height: 1px;
+  margin: 11px 0 10px;
+  background: var(--line);
+}
+
+.election-countdown-main > small {
+  color: var(--cyan-dark);
+}
+
+.election-countdown-main strong {
+  display: flex;
+  align-items: baseline;
+  margin-top: 3px;
+  line-height: 1;
+}
+
+.election-countdown-main b {
+  font-family: Arial Black, sans-serif;
+  font-size: 40px;
+  letter-spacing: -0.08em;
+}
+
+.election-countdown-main em {
+  margin-left: 2px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.election-countdown-main .is-message {
+  max-width: 58px;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 950;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.election-countdown.is-today {
+  background: var(--yellow);
+}
+
+.election-countdown.is-complete {
+  opacity: 0.78;
+}
+
 [data-reveal] {
   opacity: 0;
   transform: translateY(32px);
@@ -1902,6 +2008,65 @@ svg {
   .site-header {
     min-height: 68px;
     padding-inline: 20px;
+  }
+
+  .election-countdown {
+    z-index: 110;
+    top: 13px;
+    right: auto;
+    left: 55%;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    min-width: 96px;
+    height: 38px;
+    padding: 5px 9px;
+    border: 1.5px solid var(--ink);
+    border-radius: 13px 5px 13px 5px;
+    box-shadow: 3px 3px 0 var(--ink);
+    transform: translateX(-50%);
+  }
+
+  .election-countdown::before {
+    top: auto;
+    bottom: -1px;
+    left: 12px;
+    width: 25px;
+    height: 4px;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .election-countdown-date,
+  .election-countdown-rule {
+    display: none;
+  }
+
+  .election-countdown-main > small {
+    font-size: 8px;
+    letter-spacing: 0.08em;
+  }
+
+  .election-countdown-main {
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  .election-countdown-main strong {
+    margin-top: 0;
+  }
+
+  .election-countdown-main b {
+    font-size: 22px;
+  }
+
+  .election-countdown-main em {
+    font-size: 10px;
+  }
+
+  .election-countdown-main .is-message {
+    max-width: none;
+    margin-top: 0;
+    font-size: 11px;
   }
 
   .brand-mark {
@@ -2600,6 +2765,18 @@ svg {
     border-radius: 10px;
     background: var(--ink);
     color: var(--white);
+  }
+}
+
+@media (max-width: 360px) {
+  .election-countdown {
+    left: 53%;
+    min-width: 62px;
+    padding-inline: 5px;
+  }
+
+  .election-countdown-main > small {
+    display: none;
   }
 }
 

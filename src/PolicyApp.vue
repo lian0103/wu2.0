@@ -1,5 +1,6 @@
 <script setup>
 import { computed, onMounted } from 'vue'
+import ElectionCountdown from './ElectionCountdown.vue'
 import character from './assets/人物_1.webp'
 import { trackEvent } from './analytics'
 import { getPolicy, policies } from './policies'
@@ -42,6 +43,7 @@ onMounted(() => {
 <template>
   <div class="policy-page" :class="`policy-theme-${policy.tone}`">
     <a class="skip-link" href="#policy-main">跳至主要內容</a>
+    <ElectionCountdown />
 
     <header class="policy-header">
       <a class="brand" href="/" aria-label="回到吳亞倫首頁">
