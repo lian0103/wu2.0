@@ -1,3 +1,5 @@
+import pickleballDebut from './assets/gallery/122148683967146115.jpg'
+import websiteLaunch from './assets/gallery/122148655011146115.jpg'
 import photo833 from './assets/gallery/122148520833146115.jpg'
 import photo815 from './assets/gallery/122148520815146115.jpg'
 import photo761 from './assets/gallery/122148520761146115.jpg'
@@ -15,6 +17,9 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-09-08 上午核實來源分別顯示「12小時」與「18小時」，發布日期精度為日。
+  { id: '122148683967146115', title: '第一次體驗匹克球', district: '三峽運動中心', date: '2026-09-07', image: pickleballDebut, url: 'https://www.facebook.com/photo.php?fbid=122148683967146115' },
+  { id: '122148655011146115', title: '吳姐姐新網站正式上線', district: '最新動態', date: '2026-09-07', image: websiteLaunch, url: 'https://www.facebook.com/photo.php?fbid=122148655011146115' },
   // 2026-09-07 上午核實來源顯示「20小時」，發布日期精度為日；同日依來源順序排列。
   { id: '122148520833146115', title: '廟埕相聚，與鄉親握手問好', district: '地方活動', date: '2026-09-06', image: photo833, url: 'https://www.facebook.com/photo.php?fbid=122148520833146115' },
   { id: '122148520815146115', title: '餐會走訪，親切問候長輩', district: '地方活動', date: '2026-09-06', image: photo815, url: 'https://www.facebook.com/photo.php?fbid=122148520815146115' },
