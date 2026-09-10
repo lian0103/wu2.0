@@ -1,3 +1,9 @@
+import banquetGreeting from './assets/gallery/122148764805146115.jpg'
+import banquetToast from './assets/gallery/122148764757146115.jpg'
+import banquetConversation from './assets/gallery/122148764721146115.jpg'
+import banquetHighFive from './assets/gallery/122148764679146115.jpg'
+import banquetLeaderGreeting from './assets/gallery/122148764625146115.jpg'
+import banquetElderGreeting from './assets/gallery/122148764595146115.jpg'
 import pickleballDebut from './assets/gallery/122148683967146115.jpg'
 import websiteLaunch from './assets/gallery/122148655011146115.jpg'
 import photo833 from './assets/gallery/122148520833146115.jpg'
@@ -17,6 +23,13 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-09-10 讀取 Facebook 公開相片頁；以下六張顯示「1天」，日期精度為日。
+  { id: '122148764805146115', title: '地方餐會，與鄉親握手問好', district: '社區活動', date: '2026-09-09', image: banquetGreeting, url: 'https://www.facebook.com/photo.php?fbid=122148764805146115' },
+  { id: '122148764757146115', title: '餐會交流，與鄉親舉杯致意', district: '社區活動', date: '2026-09-09', image: banquetToast, url: 'https://www.facebook.com/photo.php?fbid=122148764757146115' },
+  { id: '122148764721146115', title: '走進席間，傾聽地方聲音', district: '社區活動', date: '2026-09-09', image: banquetConversation, url: 'https://www.facebook.com/photo.php?fbid=122148764721146115' },
+  { id: '122148764679146115', title: '熱情擊掌，向長輩親切問候', district: '社區活動', date: '2026-09-09', image: banquetHighFive, url: 'https://www.facebook.com/photo.php?fbid=122148764679146115' },
+  { id: '122148764625146115', title: '與里長交流地方大小事', district: '社區活動', date: '2026-09-09', image: banquetLeaderGreeting, url: 'https://www.facebook.com/photo.php?fbid=122148764625146115' },
+  { id: '122148764595146115', title: '關心長輩，傳遞溫暖與支持', district: '社區活動', date: '2026-09-09', image: banquetElderGreeting, url: 'https://www.facebook.com/photo.php?fbid=122148764595146115' },
   // 2026-09-08 上午核實來源分別顯示「12小時」與「18小時」，發布日期精度為日。
   { id: '122148683967146115', title: '第一次體驗匹克球', district: '三峽運動中心', date: '2026-09-07', image: pickleballDebut, url: 'https://www.facebook.com/photo.php?fbid=122148683967146115' },
   { id: '122148655011146115', title: '吳姐姐新網站正式上線', district: '最新動態', date: '2026-09-07', image: websiteLaunch, url: 'https://www.facebook.com/photo.php?fbid=122148655011146115' },
