@@ -7,7 +7,7 @@ function policyRouteFallback() {
     name: 'policy-route-fallback',
     configureServer(server) {
       server.middlewares.use((request, _response, next) => {
-        if (request.method === 'GET' && /^\/policies\/(housing|family|bike|road)\/?(?:\?.*)?$/.test(request.url || '')) {
+        if (request.method === 'GET' && /^\/policies\/(housing|family|bike|road|smoke-free)\/?(?:\?.*)?$/.test(request.url || '')) {
           request.url = '/policy.html'
         }
         next()

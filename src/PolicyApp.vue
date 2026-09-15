@@ -54,7 +54,7 @@ onMounted(() => {
         </span>
       </a>
       <nav aria-label="政見頁導覽">
-        <a href="/#policies">四大政見</a>
+        <a href="/#policies">五大政見</a>
         <a class="policy-header-action" href="/#action" data-track-event="join_navigation" data-track-location="policy_header">加入我們</a>
       </nav>
     </header>
@@ -66,9 +66,9 @@ onMounted(() => {
           <div class="policy-hero-copy">
             <a class="policy-back" href="/#policies">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6" /></svg>
-              回到四大政見
+              回到五大政見
             </a>
-            <p class="policy-count">POLICY {{ policy.id }} / 04</p>
+            <p class="policy-count">POLICY {{ policy.id }} / {{ String(policies.length).padStart(2, '0') }}</p>
             <span class="policy-label">{{ policy.short }}</span>
             <h1>{{ policy.title }}</h1>
             <p class="policy-statement">{{ policy.statement }}</p>
@@ -86,6 +86,10 @@ onMounted(() => {
             <svg v-else-if="policy.icon === 'bike'" viewBox="0 0 48 48">
               <circle cx="12" cy="34" r="8" /><circle cx="36" cy="34" r="8" />
               <path d="m12 34 9-15 7 15H12Zm9-15h9m-4-6h7m-4 0 7 21" />
+            </svg>
+            <svg v-else-if="policy.icon === 'smoke-free'" viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="18" />
+              <path d="m11 11 26 26M12 29h20m5 0h1m-7-8c0-4 5-3 5-7m-11 7c0-3 4-3 4-6" />
             </svg>
             <svg v-else viewBox="0 0 48 48">
               <path d="M15 42 21 6M33 42 27 6M24 10v7m0 7v7m0 7v4" />
@@ -170,7 +174,7 @@ onMounted(() => {
     </footer>
 
     <nav class="mobile-actions" aria-label="手機快速行動">
-      <a href="/#policies">四大政見</a>
+      <a href="/#policies">五大政見</a>
       <a href="/#action" data-track-event="join_navigation" data-track-location="policy_mobile_bar">加入我們</a>
       <a href="https://donate.tpp.org.tw/support/MGHnhwbm" target="_blank" rel="noopener noreferrer" data-track-event="donate_click" data-track-location="policy_mobile_bar">小額捐款</a>
     </nav>

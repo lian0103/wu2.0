@@ -705,7 +705,7 @@ svg {
 
 .policy-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 18px;
   width: min(1400px, 100%);
   margin: 0 auto;
@@ -722,7 +722,11 @@ svg {
   background: var(--white);
   overflow: hidden;
   transition: transform 260ms ease, box-shadow 260ms ease;
+  grid-column: span 2;
 }
+
+.policy-card:nth-child(4) { grid-column: 2 / span 2; }
+.policy-card:nth-child(5) { grid-column: 4 / span 2; }
 
 .policy-card::before {
   position: absolute;
@@ -750,6 +754,7 @@ svg {
 .tone-yellow { --card-tone: #ffe386; }
 .tone-mint { --card-tone: #b9e9c7; }
 .tone-coral { --card-tone: #ffb2a6; }
+.tone-violet { --card-tone: #d8c4ff; }
 
 .policy-topline {
   position: relative;
@@ -2149,6 +2154,12 @@ svg {
 
   .policy-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .policy-card,
+  .policy-card:nth-child(4),
+  .policy-card:nth-child(5) {
+    grid-column: auto;
   }
 
   .policy-card {

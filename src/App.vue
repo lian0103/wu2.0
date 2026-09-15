@@ -13,7 +13,7 @@ const menuOpen = ref(false)
 const activeDistrict = ref('土城')
 
 const navItems = [
-  { label: '四大政見', href: '#policies' },
+  { label: '五大政見', href: '#policies' },
   { label: '在地行動', href: '#local' },
   { label: '照片牆', href: '#gallery' },
   { label: '認識亞倫', href: '#about' },
@@ -206,7 +206,7 @@ function closeMenu() {
             </p>
             <div class="hero-actions hero-animate hero-delay-5">
               <a class="button button-primary" href="#policies" data-track-event="policy_click" data-track-location="hero" data-track-id="overview">
-                看四大政見
+                看五大政見
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
@@ -255,7 +255,7 @@ function closeMenu() {
           </p>
           <div class="hero-actions hero-animate hero-delay-5">
             <a class="button button-primary" href="#policies" data-track-event="policy_click" data-track-location="mobile_hero" data-track-id="overview">
-              看四大政見
+              看五大政見
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
             <a class="button button-ghost" href="#action" data-track-event="join_navigation" data-track-location="mobile_hero">加入吳姐姐</a>
@@ -282,7 +282,7 @@ function closeMenu() {
         <div class="section-heading" data-reveal>
           <div>
             <p class="section-kicker">OUR PROMISES</p>
-            <h2>四個生活承諾<br /><em>讓改變發生在日常</em></h2>
+            <h2>五個生活承諾<br /><em>讓改變發生在日常</em></h2>
           </div>
           <p class="section-intro">
             政策不該只是艱深的文字。從住得安心、育兒有支持，到通勤與道路安全，每一項都從市民的真實生活出發。
@@ -311,6 +311,10 @@ function closeMenu() {
                 <svg v-else-if="policy.icon === 'bike'" viewBox="0 0 48 48">
                   <circle cx="12" cy="34" r="8" /><circle cx="36" cy="34" r="8" />
                   <path d="m12 34 9-15 7 15H12Zm9-15h9m-4-6h7m-4 0 7 21" />
+                </svg>
+                <svg v-else-if="policy.icon === 'smoke-free'" viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="18" />
+                  <path d="m11 11 26 26M12 29h20m5 0h1m-7-8c0-4 5-3 5-7m-11 7c0-3 4-3 4-6" />
                 </svg>
                 <svg v-else viewBox="0 0 48 48">
                   <path d="M15 42 21 6M33 42 27 6M24 10v7m0 7v7m0 7v4" />

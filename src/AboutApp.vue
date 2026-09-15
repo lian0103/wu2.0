@@ -188,7 +188,7 @@ onBeforeUnmount(() => {
           <p>近九年的證券業歷練，讓亞倫習慣面對數字、風險與責任；企業後勤管理的經驗，則讓她理解一件事要落實，靠的是流程、協調與持續追蹤。</p>
           <p>如今，她希望把這些做事方法帶進地方政治：先傾聽、再研究；把預算說清楚、把進度追到底，讓市民每天遇到的問題，成為市政真正要解決的事。</p>
           <div class="value-points"><span>理性</span><span>務實</span><span>科學</span><span>公開透明</span></div>
-          <a class="button button-light" href="/#policies" data-track-event="policy_click" data-track-location="about_values" data-track-id="overview">看吳姐姐的四大政見 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+          <a class="button button-light" href="/#policies" data-track-event="policy_click" data-track-location="about_values" data-track-id="overview">看吳姐姐的五大政見 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
         </div>
       </section>
 

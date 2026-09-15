@@ -7,6 +7,7 @@
 .policy-theme-yellow { --policy-tone: #ffe386; }
 .policy-theme-mint { --policy-tone: #b9e9c7; }
 .policy-theme-coral { --policy-tone: #ffb2a6; }
+.policy-theme-violet { --policy-tone: #d8c4ff; }
 
 .policy-header {
   position: fixed;
