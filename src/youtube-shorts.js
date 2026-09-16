@@ -1,4 +1,4 @@
-export const youtubeShortsUpdatedAt = '2026-09-15T09:05:00+08:00'
+export const youtubeShortsUpdatedAt = '2026-09-16T09:15:00+08:00'
 
 // 此清單取自 YouTube 頻道公開摘要。日後排程只需更新這個檔案。
 export const youtubeShorts = [
@@ -7,35 +7,35 @@ export const youtubeShorts = [
     category: '選戰行動',
     title: '週末衝刺紀錄，亞倫到處嗡嗡嗡',
     publishedAt: '2026-09-13T15:10:37+00:00',
-    views: 1681,
+    views: 1806,
   },
   {
     id: 'YYpDfjiDGuM',
     category: '最新動態',
     title: '官網上線，亞倫繼續努力✈️',
     publishedAt: '2026-09-11T13:07:09+00:00',
-    views: 1249,
+    views: 1267,
   },
   {
     id: '6lI9vh2jxo0',
     category: '人物日常',
     title: '國民體育日動起來！第一次打匹克球，球跑吳姐姐也跟著跑',
     publishedAt: '2026-09-09T08:09:28+00:00',
-    views: 1593,
+    views: 1620,
   },
   {
     id: 'JOGv0O3p2Ec',
     category: '地方行動',
     title: '講到燒聲也要繼續！海山站街頭宣傳',
     publishedAt: '2026-09-08T14:43:06+00:00',
-    views: 3205,
+    views: 3279,
   },
   {
     id: 'tO9j9-dZ1XY',
     category: '地方行動',
     title: '夜騎隊熱血應援！樹林區的選擇，懇請支持吳亞倫',
     publishedAt: '2026-09-02T15:27:59+00:00',
-    views: 1653,
+    views: 1654,
   },
   {
     id: 'NHEXVTId584',
@@ -77,7 +77,7 @@ export const youtubeShorts = [
     category: '政策議題',
     title: '台灣要有鞭刑嗎？吳姐姐怎麼看？',
     publishedAt: '2026-08-10T22:48:18+00:00',
-    views: 2353,
+    views: 2357,
   },
   {
     id: 'isxcxiGRjVA',
@@ -91,6 +91,6 @@ export const youtubeShorts = [
     category: '夥伴應援',
     title: '跨區應援好鄰居，午後一起為理念努力',
     publishedAt: '2026-08-01T01:46:16+00:00',
-    views: 1772,
+    views: 1773,
   },
 ]
