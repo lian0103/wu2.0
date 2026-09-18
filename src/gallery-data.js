@@ -1,3 +1,19 @@
+import photo965897 from './assets/gallery/122149965897146115.jpg'
+import photo965831 from './assets/gallery/122149965831146115.jpg'
+import photo965819 from './assets/gallery/122149965819146115.jpg'
+import photo902993 from './assets/gallery/122149902993146115.jpg'
+import photo902969 from './assets/gallery/122149902969146115.jpg'
+import photo902909 from './assets/gallery/122149902909146115.jpg'
+import photo902885 from './assets/gallery/122149902885146115.jpg'
+import photo868649 from './assets/gallery/122149868649146115.jpg'
+import photo724661 from './assets/gallery/122149724661146115.jpg'
+import photo724601 from './assets/gallery/122149724601146115.jpg'
+import photo724577 from './assets/gallery/122149724577146115.jpg'
+import photo636311 from './assets/gallery/122149636311146115.jpg'
+import photo555449 from './assets/gallery/122149555449146115.jpg'
+import photo444035 from './assets/gallery/122149444035146115.jpg'
+import photo308957 from './assets/gallery/122149308957146115.jpg'
+import photo308909 from './assets/gallery/122149308909146115.jpg'
 import banquetGreeting from './assets/gallery/122148764805146115.jpg'
 import banquetToast from './assets/gallery/122148764757146115.jpg'
 import banquetConversation from './assets/gallery/122148764721146115.jpg'
@@ -23,6 +39,23 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-09-18 讀取 Facebook 公開相片頁；相對時間換算為台灣日期，同日依來源順序排列。
+  { id: '122149965897146115', title: '街頭行動，向市民爭取支持', district: '地方行動', date: '2026-09-18', image: photo965897, url: 'https://www.facebook.com/photo.php?fbid=122149965897146115' },
+  { id: '122149965831146115', title: '選戰重點，一張圖看懂', district: '選戰行動', date: '2026-09-18', image: photo965831, url: 'https://www.facebook.com/photo.php?fbid=122149965831146115' },
+  { id: '122149965819146115', title: '與夥伴並肩衝刺', district: '選戰行動', date: '2026-09-18', image: photo965819, url: 'https://www.facebook.com/photo.php?fbid=122149965819146115' },
+  { id: '122149902993146115', title: '騎車走街，深入地方宣傳', district: '地方行動', date: '2026-09-18', image: photo902993, url: 'https://www.facebook.com/photo.php?fbid=122149902993146115' },
+  { id: '122149902969146115', title: '路口宣傳，與市民問好', district: '地方行動', date: '2026-09-18', image: photo902969, url: 'https://www.facebook.com/photo.php?fbid=122149902969146115' },
+  { id: '122149902909146115', title: '選戰主張，持續向前', district: '選戰行動', date: '2026-09-18', image: photo902909, url: 'https://www.facebook.com/photo.php?fbid=122149902909146115' },
+  { id: '122149902885146115', title: '與夥伴合影，凝聚支持', district: '選戰行動', date: '2026-09-18', image: photo902885, url: 'https://www.facebook.com/photo.php?fbid=122149902885146115' },
+  { id: '122149868649146115', title: '鶯歌車站宣傳，向市民報告政見', district: '鶯歌車站', date: '2026-09-17', image: photo868649, url: 'https://www.facebook.com/photo.php?fbid=122149868649146115' },
+  { id: '122149724661146115', title: '尖山里走訪，向鄉親問好', district: '尖山里', date: '2026-09-16', image: photo724661, url: 'https://www.facebook.com/photo.php?fbid=122149724661146115' },
+  { id: '122149724601146115', title: '尖山里街頭宣傳', district: '尖山里', date: '2026-09-16', image: photo724601, url: 'https://www.facebook.com/photo.php?fbid=122149724601146115' },
+  { id: '122149724577146115', title: '騎車走訪尖山里', district: '尖山里', date: '2026-09-16', image: photo724577, url: 'https://www.facebook.com/photo.php?fbid=122149724577146115' },
+  { id: '122149636311146115', title: '無菸城市，推動戶外負壓吸菸室', district: '政策主張', date: '2026-09-16', image: photo636311, url: 'https://www.facebook.com/photo.php?fbid=122149636311146115' },
+  { id: '122149555449146115', title: '志工夥伴見面會 9/24', district: '志工活動', date: '2026-09-15', image: photo555449, url: 'https://www.facebook.com/photo.php?fbid=122149555449146115' },
+  { id: '122149444035146115', title: '參與新北市綠生活音樂節', district: '新北市美術館', date: '2026-09-14', image: photo444035, url: 'https://www.facebook.com/photo.php?fbid=122149444035146115' },
+  { id: '122149308957146115', title: '地方行動重點圖卡', district: '地方行動', date: '2026-09-13', image: photo308957, url: 'https://www.facebook.com/photo.php?fbid=122149308957146115' },
+  { id: '122149308909146115', title: '與夥伴分享地方主張', district: '地方行動', date: '2026-09-13', image: photo308909, url: 'https://www.facebook.com/photo.php?fbid=122149308909146115' },
   // 2026-09-10 讀取 Facebook 公開相片頁；以下六張顯示「1天」，日期精度為日。
   { id: '122148764805146115', title: '地方餐會，與鄉親握手問好', district: '社區活動', date: '2026-09-09', image: banquetGreeting, url: 'https://www.facebook.com/photo.php?fbid=122148764805146115' },
   { id: '122148764757146115', title: '餐會交流，與鄉親舉杯致意', district: '社區活動', date: '2026-09-09', image: banquetToast, url: 'https://www.facebook.com/photo.php?fbid=122148764757146115' },

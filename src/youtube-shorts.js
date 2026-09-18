@@ -1,48 +1,55 @@
-export const youtubeShortsUpdatedAt = '2026-09-17T09:03:00+08:00'
+export const youtubeShortsUpdatedAt = '2026-09-18T09:13:00+08:00'
 
 // 此清單取自 YouTube 頻道公開摘要。日後排程只需更新這個檔案。
 export const youtubeShorts = [
+  {
+    id: 'B_jKTV8_l3w',
+    category: '行程精華',
+    title: '55 秒精華看完 1 小時 43 分的直播',
+    publishedAt: '2026-09-17T14:50:12+00:00',
+    views: 1258,
+  },
   {
     id: 'xA0DZkk_nzU',
     category: '選戰行動',
     title: '週末衝刺紀錄，亞倫到處嗡嗡嗡',
     publishedAt: '2026-09-13T15:10:37+00:00',
-    views: 1915,
+    views: 2021,
   },
   {
     id: 'YYpDfjiDGuM',
     category: '最新動態',
     title: '官網上線，亞倫繼續努力✈️',
     publishedAt: '2026-09-11T13:07:09+00:00',
-    views: 1282,
+    views: 1297,
   },
   {
     id: '6lI9vh2jxo0',
     category: '人物日常',
     title: '國民體育日動起來！第一次打匹克球，球跑吳姐姐也跟著跑',
     publishedAt: '2026-09-09T08:09:28+00:00',
-    views: 1657,
+    views: 1676,
   },
   {
     id: 'JOGv0O3p2Ec',
     category: '地方行動',
     title: '講到燒聲也要繼續！海山站街頭宣傳',
     publishedAt: '2026-09-08T14:43:06+00:00',
-    views: 3297,
+    views: 3361,
   },
   {
     id: 'tO9j9-dZ1XY',
     category: '地方行動',
     title: '夜騎隊熱血應援！樹林區的選擇，懇請支持吳亞倫',
     publishedAt: '2026-09-02T15:27:59+00:00',
-    views: 1654,
+    views: 1657,
   },
   {
     id: 'NHEXVTId584',
     category: '選戰行動',
     title: '台灣的選擇，土樹三鶯的選擇是吳亞倫',
     publishedAt: '2026-08-28T15:21:04+00:00',
-    views: 3288,
+    views: 3289,
   },
   {
     id: 'lHdufmlX3fY',
@@ -91,6 +98,6 @@ export const youtubeShorts = [
     category: '夥伴應援',
     title: '跨區應援好鄰居，午後一起為理念努力',
     publishedAt: '2026-08-01T01:46:16+00:00',
-    views: 1780,
+    views: 1783,
   },
 ]
