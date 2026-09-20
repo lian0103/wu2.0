@@ -1,3 +1,11 @@
+import photo117391 from './assets/gallery/122150117391146115.jpg'
+import photo117349 from './assets/gallery/122150117349146115.jpg'
+import photo117283 from './assets/gallery/122150117283146115.jpg'
+import photo117205 from './assets/gallery/122150117205146115.jpg'
+import photo117181 from './assets/gallery/122150117181146115.jpg'
+import photo117121 from './assets/gallery/122150117121146115.jpg'
+import photo117097 from './assets/gallery/122150117097146115.jpg'
+import photo009307 from './assets/gallery/122150009307146115.jpg'
 import photo965897 from './assets/gallery/122149965897146115.jpg'
 import photo965831 from './assets/gallery/122149965831146115.jpg'
 import photo965819 from './assets/gallery/122149965819146115.jpg'
@@ -39,6 +47,15 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-09-20 上午核實 Facebook 相片頁；前七張顯示「21小時」，市場圖卡顯示「1天」。
+  { id: '122150117391146115', title: '活動現場，向鄉親分享地方主張', district: '地方活動', date: '2026-09-19', image: photo117391, url: 'https://www.facebook.com/photo.php?fbid=122150117391146115' },
+  { id: '122150117349146115', title: '與現場長輩握手問好', district: '社區活動', date: '2026-09-19', image: photo117349, url: 'https://www.facebook.com/photo.php?fbid=122150117349146115' },
+  { id: '122150117283146115', title: '餐會走訪，與鄉親交流', district: '社區活動', date: '2026-09-19', image: photo117283, url: 'https://www.facebook.com/photo.php?fbid=122150117283146115' },
+  { id: '122150117205146115', title: '餐會現場，向長輩親切問候', district: '社區活動', date: '2026-09-19', image: photo117205, url: 'https://www.facebook.com/photo.php?fbid=122150117205146115' },
+  { id: '122150117181146115', title: '市場街頭，與市民面對面', district: '市場走訪', date: '2026-09-19', image: photo117181, url: 'https://www.facebook.com/photo.php?fbid=122150117181146115' },
+  { id: '122150117121146115', title: '活動現場，與民眾握手交流', district: '社區活動', date: '2026-09-19', image: photo117121, url: 'https://www.facebook.com/photo.php?fbid=122150117121146115' },
+  { id: '122150117097146115', title: '逛市場，介紹在地美食', district: '市場走訪', date: '2026-09-19', image: photo117097, url: 'https://www.facebook.com/photo.php?fbid=122150117097146115' },
+  { id: '122150009307146115', title: '好骨力隨身袋陪你逛樹林與鶯歌市場', district: '市場行程', date: '2026-09-18', image: photo009307, url: 'https://www.facebook.com/photo.php?fbid=122150009307146115' },
   // 2026-09-18 讀取 Facebook 公開相片頁；相對時間換算為台灣日期，同日依來源順序排列。
   { id: '122149965897146115', title: '街頭行動，向市民爭取支持', district: '地方行動', date: '2026-09-18', image: photo965897, url: 'https://www.facebook.com/photo.php?fbid=122149965897146115' },
   { id: '122149965831146115', title: '選戰重點，一張圖看懂', district: '選戰行動', date: '2026-09-18', image: photo965831, url: 'https://www.facebook.com/photo.php?fbid=122149965831146115' },
