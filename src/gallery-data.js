@@ -1,3 +1,11 @@
+import photo496459 from './assets/gallery/122150496459146115.jpg'
+import photo287443 from './assets/gallery/122150287443146115.jpg'
+import photo287389 from './assets/gallery/122150287389146115.jpg'
+import photo287365 from './assets/gallery/122150287365146115.jpg'
+import photo287299 from './assets/gallery/122150287299146115.jpg'
+import photo287287 from './assets/gallery/122150287287146115.jpg'
+import photo287215 from './assets/gallery/122150287215146115.jpg'
+import photo287191 from './assets/gallery/122150287191146115.jpg'
 import photo117391 from './assets/gallery/122150117391146115.jpg'
 import photo117349 from './assets/gallery/122150117349146115.jpg'
 import photo117283 from './assets/gallery/122150117283146115.jpg'
@@ -47,6 +55,15 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-09-22 上午核實 Facebook 相片頁；首張顯示「2小時」，其餘七張顯示「1天」。
+  { id: '122150496459146115', title: '大家早安，亞倫陪伴大家出門上班', district: '三峽', date: '2026-09-22', image: photo496459, url: 'https://www.facebook.com/photo.php?fbid=122150496459146115' },
+  { id: '122150287443146115', title: '餐會交流，與鄉親舉杯致意', district: '地方活動', date: '2026-09-21', image: photo287443, url: 'https://www.facebook.com/photo.php?fbid=122150287443146115' },
+  { id: '122150287389146115', title: '活動現場，與長輩親切互動', district: '地方活動', date: '2026-09-21', image: photo287389, url: 'https://www.facebook.com/photo.php?fbid=122150287389146115' },
+  { id: '122150287365146115', title: '市場走訪，向市民揮手問好', district: '市場走訪', date: '2026-09-21', image: photo287365, url: 'https://www.facebook.com/photo.php?fbid=122150287365146115' },
+  { id: '122150287299146115', title: '送上小風車，與親子互動', district: '地方走訪', date: '2026-09-21', image: photo287299, url: 'https://www.facebook.com/photo.php?fbid=122150287299146115' },
+  { id: '122150287287146115', title: '樹林圳安里節能減碳宣導', district: '圳安里', date: '2026-09-21', image: photo287287, url: 'https://www.facebook.com/photo.php?fbid=122150287287146115' },
+  { id: '122150287215146115', title: '走進活動現場，傾聽鄉親聲音', district: '地方活動', date: '2026-09-21', image: photo287215, url: 'https://www.facebook.com/photo.php?fbid=122150287215146115' },
+  { id: '122150287191146115', title: '帶著行動物資，持續走訪地方', district: '地方行動', date: '2026-09-21', image: photo287191, url: 'https://www.facebook.com/photo.php?fbid=122150287191146115' },
   // 2026-09-20 上午核實 Facebook 相片頁；前七張顯示「21小時」，市場圖卡顯示「1天」。
   { id: '122150117391146115', title: '活動現場，向鄉親分享地方主張', district: '地方活動', date: '2026-09-19', image: photo117391, url: 'https://www.facebook.com/photo.php?fbid=122150117391146115' },
   { id: '122150117349146115', title: '與現場長輩握手問好', district: '社區活動', date: '2026-09-19', image: photo117349, url: 'https://www.facebook.com/photo.php?fbid=122150117349146115' },
