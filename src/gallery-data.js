@@ -1,3 +1,6 @@
+import photo654847 from './assets/gallery/122150654847146115.jpg'
+import photo654757 from './assets/gallery/122150654757146115.jpg'
+import photo654739 from './assets/gallery/122150654739146115.jpg'
 import photo496459 from './assets/gallery/122150496459146115.jpg'
 import photo287443 from './assets/gallery/122150287443146115.jpg'
 import photo287389 from './assets/gallery/122150287389146115.jpg'
@@ -55,6 +58,10 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-09-23 上午核實 Facebook 相片頁；同批照片顯示為數分鐘前發布。
+  { id: '122150654847146115', title: '路口向通勤市民揮手問好', district: '地方行動', date: '2026-09-23', image: photo654847, url: 'https://www.facebook.com/photo.php?fbid=122150654847146115' },
+  { id: '122150654757146115', title: '街頭宣傳，向騎士爭取支持', district: '地方行動', date: '2026-09-23', image: photo654757, url: 'https://www.facebook.com/photo.php?fbid=122150654757146115' },
+  { id: '122150654739146115', title: '清晨站街，陪伴市民出門', district: '地方行動', date: '2026-09-23', image: photo654739, url: 'https://www.facebook.com/photo.php?fbid=122150654739146115' },
   // 2026-09-22 上午核實 Facebook 相片頁；首張顯示「2小時」，其餘七張顯示「1天」。
   { id: '122150496459146115', title: '大家早安，亞倫陪伴大家出門上班', district: '三峽', date: '2026-09-22', image: photo496459, url: 'https://www.facebook.com/photo.php?fbid=122150496459146115' },
   { id: '122150287443146115', title: '餐會交流，與鄉親舉杯致意', district: '地方活動', date: '2026-09-21', image: photo287443, url: 'https://www.facebook.com/photo.php?fbid=122150287443146115' },
