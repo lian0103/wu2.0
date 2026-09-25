@@ -1,3 +1,6 @@
+import photo846205 from './assets/gallery/122150846205146115.jpg'
+import photo846157 from './assets/gallery/122150846157146115.jpg'
+import photo846121 from './assets/gallery/122150846121146115.jpg'
 import photo802417 from './assets/gallery/122150802417146115.jpg'
 import photo802321 from './assets/gallery/122150802321146115.jpg'
 import photo802303 from './assets/gallery/122150802303146115.jpg'
@@ -61,6 +64,10 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-09-25 上午核實 Facebook 相片頁；此批顯示「16小時前」，換算為 9 月 24 日。
+  { id: '122150846205146115', title: '與地方夥伴及支持者大合照', district: '地方活動', date: '2026-09-24', image: photo846205, url: 'https://www.facebook.com/photo.php?fbid=122150846205146115' },
+  { id: '122150846157146115', title: '與候選團隊共同登台爭取支持', district: '選戰活動', date: '2026-09-24', image: photo846157, url: 'https://www.facebook.com/photo.php?fbid=122150846157146115' },
+  { id: '122150846121146115', title: '活動現場，與夥伴握手致意', district: '地方活動', date: '2026-09-24', image: photo846121, url: 'https://www.facebook.com/photo.php?fbid=122150846121146115' },
   // 2026-09-24 上午核實 Facebook 相片頁；同批照片顯示為一小時內發布。
   { id: '122150802417146115', title: '路口站街，向通勤騎士問好', district: '地方行動', date: '2026-09-24', image: photo802417, url: 'https://www.facebook.com/photo.php?fbid=122150802417146115' },
   { id: '122150802321146115', title: '清晨街頭宣傳，爭取市民支持', district: '地方行動', date: '2026-09-24', image: photo802321, url: 'https://www.facebook.com/photo.php?fbid=122150802321146115' },
