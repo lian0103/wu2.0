@@ -1,3 +1,11 @@
+import weeklySchedule from './assets/gallery/122152508955146115.jpg'
+import fluVaccineNotice from './assets/gallery/122152376541146115.jpg'
+import octoberBanquetConversation from './assets/gallery/122152241595146115.jpg'
+import octoberBanquetSpeech from './assets/gallery/122152241535146115.jpg'
+import octoberBanquetToast from './assets/gallery/122152241517146115.jpg'
+import octoberBanquetStage from './assets/gallery/122152241457146115.jpg'
+import octoberBanquetCheers from './assets/gallery/122152241421146115.jpg'
+import octoberBanquetGreeting from './assets/gallery/122152241379146115.jpg'
 import photo965897 from './assets/gallery/122149965897146115.jpg'
 import photo965831 from './assets/gallery/122149965831146115.jpg'
 import photo965819 from './assets/gallery/122149965819146115.jpg'
@@ -39,6 +47,15 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-06 讀取 Facebook 公開相片頁；第一張為當日貼文，其餘顯示「1天」。
+  { id: '122152508955146115', title: '亞倫本週嗡嗡嗡，四場揮手行程', district: '最新行程', date: '2026-10-06', image: weeklySchedule, url: 'https://www.facebook.com/photo.php?fbid=122152508955146115' },
+  { id: '122152376541146115', title: '流感疫苗開打，提醒符合資格朋友接種', district: '健康提醒', date: '2026-10-05', image: fluVaccineNotice, url: 'https://www.facebook.com/photo.php?fbid=122152376541146115' },
+  { id: '122152241595146115', title: '餐會交流，傾聽鄉親分享', district: '地方活動', date: '2026-10-05', image: octoberBanquetConversation, url: 'https://www.facebook.com/photo.php?fbid=122152241595146115' },
+  { id: '122152241535146115', title: '活動致詞，向鄉親熱情問候', district: '地方活動', date: '2026-10-05', image: octoberBanquetSpeech, url: 'https://www.facebook.com/photo.php?fbid=122152241535146115' },
+  { id: '122152241517146115', title: '餐敘交流，與鄉親舉杯致意', district: '地方活動', date: '2026-10-05', image: octoberBanquetToast, url: 'https://www.facebook.com/photo.php?fbid=122152241517146115' },
+  { id: '122152241457146115', title: '地方餐會，與夥伴分享理念', district: '地方活動', date: '2026-10-05', image: octoberBanquetStage, url: 'https://www.facebook.com/photo.php?fbid=122152241457146115' },
+  { id: '122152241421146115', title: '與鄉親同桌交流，熱情乾杯', district: '地方活動', date: '2026-10-05', image: octoberBanquetCheers, url: 'https://www.facebook.com/photo.php?fbid=122152241421146115' },
+  { id: '122152241379146115', title: '關心長輩，親切握手問好', district: '地方活動', date: '2026-10-05', image: octoberBanquetGreeting, url: 'https://www.facebook.com/photo.php?fbid=122152241379146115' },
   // 2026-09-18 讀取 Facebook 公開相片頁；相對時間換算為台灣日期，同日依來源順序排列。
   { id: '122149965897146115', title: '街頭行動，向市民爭取支持', district: '地方行動', date: '2026-09-18', image: photo965897, url: 'https://www.facebook.com/photo.php?fbid=122149965897146115' },
   { id: '122149965831146115', title: '選戰重點，一張圖看懂', district: '選戰行動', date: '2026-09-18', image: photo965831, url: 'https://www.facebook.com/photo.php?fbid=122149965831146115' },
