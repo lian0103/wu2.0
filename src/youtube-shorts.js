@@ -1,7 +1,14 @@
-export const youtubeShortsUpdatedAt = '2026-10-11T07:21:00+08:00'
+export const youtubeShortsUpdatedAt = '2026-10-11T09:08:00+08:00'
 
 // 此清單取自 YouTube 頻道公開摘要。日後排程只需更新這個檔案。
 export const youtubeShorts = [
+  {
+    id: 'jEVntAAge3o',
+    category: '地方活動',
+    title: '樹林慈聖宮天后宮 28 週年宮慶，吳姐姐獻唱〈夜來香〉：新北市長這一票，她推薦誰？',
+    publishedAt: '2026-10-10T17:08:36-07:00',
+    views: 54,
+  },
   {
     id: 's_cNj7SO8Us',
     category: '地方行動',
@@ -35,7 +42,7 @@ export const youtubeShorts = [
     category: '選戰行動',
     title: '週末衝刺紀錄，亞倫到處嗡嗡嗡',
     publishedAt: '2026-09-13T15:10:37+00:00',
-    views: 2553,
+    views: 2554,
   },
   {
     id: 'YYpDfjiDGuM',
