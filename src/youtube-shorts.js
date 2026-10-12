@@ -1,4 +1,4 @@
-export const youtubeShortsUpdatedAt = '2026-10-11T09:08:00+08:00'
+export const youtubeShortsUpdatedAt = '2026-10-12T09:04:00+08:00'
 
 // 此清單取自 YouTube 頻道公開摘要。日後排程只需更新這個檔案。
 export const youtubeShorts = [
@@ -7,63 +7,63 @@ export const youtubeShorts = [
     category: '地方活動',
     title: '樹林慈聖宮天后宮 28 週年宮慶，吳姐姐獻唱〈夜來香〉：新北市長這一票，她推薦誰？',
     publishedAt: '2026-10-10T17:08:36-07:00',
-    views: 54,
+    views: 658,
   },
   {
     id: 's_cNj7SO8Us',
     category: '地方行動',
     title: '行程精華｜感謝里長與市民朋友的鼓勵，亞倫本週嗡嗡嗡',
     publishedAt: '2026-10-04T08:12:29-07:00',
-    views: 2947,
+    views: 2944,
   },
   {
     id: 'npKWUs6ZNLQ',
     category: '人物日常',
     title: '輕鬆的週六夜晚，一首〈甜蜜蜜〉送給大家',
     publishedAt: '2026-10-03T07:26:58-07:00',
-    views: 2838,
+    views: 2842,
   },
   {
     id: '5VdDxif7vvY',
     category: '選戰心聲',
     title: '這條路，我會穩穩地走下去',
     publishedAt: '2026-09-27T07:15:19-07:00',
-    views: 2107,
+    views: 2111,
   },
   {
     id: 'B_jKTV8_l3w',
     category: '地方行動',
     title: '行程精華｜55 秒看完 1 小時 43 分的直播',
     publishedAt: '2026-09-17T07:50:12-07:00',
-    views: 2293,
+    views: 2298,
   },
   {
     id: 'xA0DZkk_nzU',
     category: '選戰行動',
     title: '週末衝刺紀錄，亞倫到處嗡嗡嗡',
     publishedAt: '2026-09-13T15:10:37+00:00',
-    views: 2554,
+    views: 2571,
   },
   {
     id: 'YYpDfjiDGuM',
     category: '最新動態',
     title: '官網上線，亞倫繼續努力✈️',
     publishedAt: '2026-09-11T13:07:09+00:00',
-    views: 1387,
+    views: 1400,
   },
   {
     id: '6lI9vh2jxo0',
     category: '人物日常',
     title: '國民體育日動起來！第一次打匹克球，球跑吳姐姐也跟著跑',
     publishedAt: '2026-09-09T08:09:28+00:00',
-    views: 1758,
+    views: 1761,
   },
   {
     id: 'JOGv0O3p2Ec',
     category: '地方行動',
     title: '講到燒聲也要繼續！海山站街頭宣傳',
     publishedAt: '2026-09-08T14:43:06+00:00',
-    views: 3516,
+    views: 3517,
   },
   {
     id: 'tO9j9-dZ1XY',
@@ -77,21 +77,21 @@ export const youtubeShorts = [
     category: '選戰行動',
     title: '台灣的選擇，土樹三鶯的選擇是吳亞倫',
     publishedAt: '2026-08-28T15:21:04+00:00',
-    views: 3341,
+    views: 3357,
   },
   {
     id: 'lHdufmlX3fY',
     category: '政策主張',
     title: '誰是任內興辦社宅最多的市長？社宅政策要持續努力',
     publishedAt: '2026-08-27T11:44:44+00:00',
-    views: 2002,
+    views: 2005,
   },
   {
     id: 'etGbAH9ucgg',
     category: '地方議題',
     title: '北大特區要不要設吸菸室？吳姐姐聽你說',
     publishedAt: '2026-08-20T15:37:23+00:00',
-    views: 1741,
+    views: 1742,
   },
   {
     id: '-h4AXa8JZmU',
@@ -112,7 +112,7 @@ export const youtubeShorts = [
     category: '政策議題',
     title: '台灣要有鞭刑嗎？吳姐姐怎麼看？',
     publishedAt: '2026-08-10T22:48:18+00:00',
-    views: 2381,
+    views: 2383,
   },
   {
     id: 'isxcxiGRjVA',
@@ -126,6 +126,6 @@ export const youtubeShorts = [
     category: '夥伴應援',
     title: '跨區應援好鄰居，午後一起為理念努力',
     publishedAt: '2026-08-01T01:46:16+00:00',
-    views: 1870,
+    views: 1879,
   },
 ]

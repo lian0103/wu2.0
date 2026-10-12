@@ -1,3 +1,13 @@
+import octoberWeeklySchedule from './assets/gallery/122153255703146115.jpg'
+import octoberElderBanquetHall from './assets/gallery/122153225289146115.jpg'
+import octoberPartnerHighFive from './assets/gallery/122153207235146115.jpg'
+import octoberElderToast from './assets/gallery/122153207115146115.jpg'
+import octoberCommunityBlessing from './assets/gallery/122153207091146115.jpg'
+import octoberBanquetTableToast from './assets/gallery/122153207031146115.jpg'
+import octoberConvenienceStoreBreak from './assets/gallery/122153207007146115.jpg'
+import octoberNewTaipeiPartners from './assets/gallery/122153189715146115.jpg'
+import octoberHolidayPartnerPhoto from './assets/gallery/122153189655146115.jpg'
+import octoberBaoanBanquet from './assets/gallery/122153189631146115.jpg'
 import octoberCommunityGroup from './assets/gallery/122153088477146115.jpg'
 import octoberCandidateStage from './assets/gallery/122153088435146115.jpg'
 import qingfuFestival from './assets/gallery/122153088393146115.jpg'
@@ -86,6 +96,17 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-12 上午核實 Facebook 相片頁；此批顯示「12–22 小時前」，皆換算為 10 月 11 日。
+  { id: '122153255703146115', title: '下週嗡嗡嗡：樹林、三峽揮手與紙風車加工行程', district: '最新行程', date: '2026-10-11', image: octoberWeeklySchedule, url: 'https://www.facebook.com/photo.php?fbid=122153255703146115' },
+  { id: '122153225289146115', title: '重陽節餐會走訪，向滿場長輩問好', district: '重陽敬老', date: '2026-10-11', image: octoberElderBanquetHall, url: 'https://www.facebook.com/photo.php?fbid=122153225289146115' },
+  { id: '122153207235146115', title: '重陽餐會與地方夥伴擊掌打氣', district: '重陽敬老', date: '2026-10-11', image: octoberPartnerHighFive, url: 'https://www.facebook.com/photo.php?fbid=122153207235146115' },
+  { id: '122153207115146115', title: '重陽餐會與長輩舉杯問候', district: '重陽敬老', date: '2026-10-11', image: octoberElderToast, url: 'https://www.facebook.com/photo.php?fbid=122153207115146115' },
+  { id: '122153207091146115', title: '社區餐敘，向長輩送上重陽祝福', district: '重陽敬老', date: '2026-10-11', image: octoberCommunityBlessing, url: 'https://www.facebook.com/photo.php?fbid=122153207091146115' },
+  { id: '122153207031146115', title: '重陽餐會逐桌與鄉親舉杯致意', district: '重陽敬老', date: '2026-10-11', image: octoberBanquetTableToast, url: 'https://www.facebook.com/photo.php?fbid=122153207031146115' },
+  { id: '122153207007146115', title: '行程間在超商短暫休息再出發', district: '人物日常', date: '2026-10-11', image: octoberConvenienceStoreBreak, url: 'https://www.facebook.com/photo.php?fbid=122153207007146115' },
+  { id: '122153189715146115', title: '雙十連假與新北夥伴參與地方活動', district: '夥伴應援', date: '2026-10-11', image: octoberNewTaipeiPartners, url: 'https://www.facebook.com/photo.php?fbid=122153189715146115' },
+  { id: '122153189655146115', title: '連假活動與新北戰友合影', district: '夥伴應援', date: '2026-10-11', image: octoberHolidayPartnerPhoto, url: 'https://www.facebook.com/photo.php?fbid=122153189655146115' },
+  { id: '122153189631146115', title: '保安里重陽餐會，向長輩致意', district: '重陽敬老', date: '2026-10-11', image: octoberBaoanBanquet, url: 'https://www.facebook.com/photo.php?fbid=122153189631146115' },
   // 2026-10-11 上午核實 Facebook 相片頁；前六張顯示「15小時前」，換算為 10 月 10 日。
   { id: '122153088477146115', title: '與市民及支持者齊聚合影', district: '地方活動', date: '2026-10-10', image: octoberCommunityGroup, url: 'https://www.facebook.com/photo.php?fbid=122153088477146115' },
   { id: '122153088435146115', title: '與三重蘆洲候選夥伴共同登台', district: '夥伴應援', date: '2026-10-10', image: octoberCandidateStage, url: 'https://www.facebook.com/photo.php?fbid=122153088435146115' },
