@@ -1,3 +1,4 @@
+import referendumPolicyCard from './assets/gallery/122153329899146115.jpg'
 import octoberWeeklySchedule from './assets/gallery/122153255703146115.jpg'
 import octoberElderBanquetHall from './assets/gallery/122153225289146115.jpg'
 import octoberPartnerHighFive from './assets/gallery/122153207235146115.jpg'
@@ -96,6 +97,8 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-13 上午核實 Facebook 相片頁；貼文顯示「21 小時前」，換算為 10 月 12 日。
+  { id: '122153329899146115', title: '公投案沒進入投票，治安與交通安全仍需回應', district: '政策主張', date: '2026-10-12', image: referendumPolicyCard, url: 'https://www.facebook.com/photo.php?fbid=122153329899146115' },
   // 2026-10-12 上午核實 Facebook 相片頁；此批顯示「12–22 小時前」，皆換算為 10 月 11 日。
   { id: '122153255703146115', title: '下週嗡嗡嗡：樹林、三峽揮手與紙風車加工行程', district: '最新行程', date: '2026-10-11', image: octoberWeeklySchedule, url: 'https://www.facebook.com/photo.php?fbid=122153255703146115' },
   { id: '122153225289146115', title: '重陽節餐會走訪，向滿場長輩問好', district: '重陽敬老', date: '2026-10-11', image: octoberElderBanquetHall, url: 'https://www.facebook.com/photo.php?fbid=122153225289146115' },

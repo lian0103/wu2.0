@@ -1,4 +1,4 @@
-export const youtubeShortsUpdatedAt = '2026-10-12T09:04:00+08:00'
+export const youtubeShortsUpdatedAt = '2026-10-13T09:10:00+08:00'
 
 // 此清單取自 YouTube 頻道公開摘要。日後排程只需更新這個檔案。
 export const youtubeShorts = [
@@ -7,42 +7,42 @@ export const youtubeShorts = [
     category: '地方活動',
     title: '樹林慈聖宮天后宮 28 週年宮慶，吳姐姐獻唱〈夜來香〉：新北市長這一票，她推薦誰？',
     publishedAt: '2026-10-10T17:08:36-07:00',
-    views: 658,
+    views: 688,
   },
   {
     id: 's_cNj7SO8Us',
     category: '地方行動',
     title: '行程精華｜感謝里長與市民朋友的鼓勵，亞倫本週嗡嗡嗡',
     publishedAt: '2026-10-04T08:12:29-07:00',
-    views: 2944,
+    views: 2965,
   },
   {
     id: 'npKWUs6ZNLQ',
     category: '人物日常',
     title: '輕鬆的週六夜晚，一首〈甜蜜蜜〉送給大家',
     publishedAt: '2026-10-03T07:26:58-07:00',
-    views: 2842,
+    views: 2887,
   },
   {
     id: '5VdDxif7vvY',
     category: '選戰心聲',
     title: '這條路，我會穩穩地走下去',
     publishedAt: '2026-09-27T07:15:19-07:00',
-    views: 2111,
+    views: 2112,
   },
   {
     id: 'B_jKTV8_l3w',
     category: '地方行動',
     title: '行程精華｜55 秒看完 1 小時 43 分的直播',
     publishedAt: '2026-09-17T07:50:12-07:00',
-    views: 2298,
+    views: 2299,
   },
   {
     id: 'xA0DZkk_nzU',
     category: '選戰行動',
     title: '週末衝刺紀錄，亞倫到處嗡嗡嗡',
     publishedAt: '2026-09-13T15:10:37+00:00',
-    views: 2571,
+    views: 2581,
   },
   {
     id: 'YYpDfjiDGuM',
@@ -63,7 +63,7 @@ export const youtubeShorts = [
     category: '地方行動',
     title: '講到燒聲也要繼續！海山站街頭宣傳',
     publishedAt: '2026-09-08T14:43:06+00:00',
-    views: 3517,
+    views: 3519,
   },
   {
     id: 'tO9j9-dZ1XY',
@@ -91,7 +91,7 @@ export const youtubeShorts = [
     category: '地方議題',
     title: '北大特區要不要設吸菸室？吳姐姐聽你說',
     publishedAt: '2026-08-20T15:37:23+00:00',
-    views: 1742,
+    views: 1743,
   },
   {
     id: '-h4AXa8JZmU',
@@ -119,13 +119,13 @@ export const youtubeShorts = [
     category: '地方行動',
     title: '把握每一次機會，亞倫衝衝衝！',
     publishedAt: '2026-08-01T12:25:10+00:00',
-    views: 2131,
+    views: 2136,
   },
   {
     id: 'd-NUNcOvfk4',
     category: '夥伴應援',
     title: '跨區應援好鄰居，午後一起為理念努力',
     publishedAt: '2026-08-01T01:46:16+00:00',
-    views: 1879,
+    views: 1881,
   },
 ]
