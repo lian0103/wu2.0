@@ -1,3 +1,8 @@
+import octoberMarketGreetingWithPartners from './assets/gallery/122153469327146115.jpg'
+import octoberTemplePressEvent from './assets/gallery/122153469315146115.jpg'
+import octoberBalloonStreetOutreach from './assets/gallery/122153469183146115.jpg'
+import octoberStreetWaveCandidate from './assets/gallery/122153469141146115.jpg'
+import octoberMarketTeamVisit from './assets/gallery/122153469093146115.jpg'
 import referendumPolicyCard from './assets/gallery/122153329899146115.jpg'
 import octoberWeeklySchedule from './assets/gallery/122153255703146115.jpg'
 import octoberElderBanquetHall from './assets/gallery/122153225289146115.jpg'
@@ -97,6 +102,12 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-14 上午核實 Facebook 相片頁；此批皆顯示「20 小時前」，換算為 10 月 13 日。
+  { id: '122153469327146115', title: '市場走訪，與地方夥伴一同向市民問好', district: '市場走訪', date: '2026-10-13', image: octoberMarketGreetingWithPartners, url: 'https://www.facebook.com/photo.php?fbid=122153469327146115' },
+  { id: '122153469315146115', title: '樹林鎮南宮與地方夥伴共同受訪', district: '夥伴應援', date: '2026-10-13', image: octoberTemplePressEvent, url: 'https://www.facebook.com/photo.php?fbid=122153469315146115' },
+  { id: '122153469183146115', title: '路口揮手，宣傳新人新氣象、服務有力量', district: '地方行動', date: '2026-10-13', image: octoberBalloonStreetOutreach, url: 'https://www.facebook.com/photo.php?fbid=122153469183146115' },
+  { id: '122153469141146115', title: '街頭揮手，向往來市民親切問好', district: '地方行動', date: '2026-10-13', image: octoberStreetWaveCandidate, url: 'https://www.facebook.com/photo.php?fbid=122153469141146115' },
+  { id: '122153469093146115', title: '市場走訪，與團隊逐攤向商家問好', district: '市場走訪', date: '2026-10-13', image: octoberMarketTeamVisit, url: 'https://www.facebook.com/photo.php?fbid=122153469093146115' },
   // 2026-10-13 上午核實 Facebook 相片頁；貼文顯示「21 小時前」，換算為 10 月 12 日。
   { id: '122153329899146115', title: '公投案沒進入投票，治安與交通安全仍需回應', district: '政策主張', date: '2026-10-12', image: referendumPolicyCard, url: 'https://www.facebook.com/photo.php?fbid=122153329899146115' },
   // 2026-10-12 上午核實 Facebook 相片頁；此批顯示「12–22 小時前」，皆換算為 10 月 11 日。
