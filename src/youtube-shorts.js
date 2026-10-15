@@ -1,4 +1,4 @@
-export const youtubeShortsUpdatedAt = '2026-10-15T09:07:00+08:00'
+export const youtubeShortsUpdatedAt = '2026-10-15T16:50:08+08:00'
 
 // 此清單取自 YouTube 頻道公開摘要。日後排程只需更新這個檔案。
 export const youtubeShorts = [
@@ -7,21 +7,21 @@ export const youtubeShorts = [
     category: '地方行動',
     title: '鶯歌二橋熱情揮手，用滿滿活力迎接美好的一天',
     publishedAt: '2026-10-14T17:21:08-07:00',
-    views: 502,
+    views: 1486,
   },
   {
     id: 'jEVntAAge3o',
     category: '地方活動',
     title: '樹林慈聖宮天后宮 28 週年宮慶，吳姐姐獻唱〈夜來香〉：新北市長這一票，她推薦誰？',
     publishedAt: '2026-10-10T17:08:36-07:00',
-    views: 765,
+    views: 771,
   },
   {
     id: 's_cNj7SO8Us',
     category: '地方行動',
     title: '行程精華｜感謝里長與市民朋友的鼓勵，亞倫本週嗡嗡嗡',
     publishedAt: '2026-10-04T08:12:29-07:00',
-    views: 2976,
+    views: 2979,
   },
   {
     id: 'npKWUs6ZNLQ',
