@@ -1,3 +1,8 @@
+import octoberShopGreeting from './assets/gallery/122153786415146115.jpg'
+import octoberNightStreetOutreach from './assets/gallery/122153786361146115.jpg'
+import octoberParkConversation from './assets/gallery/122153786301146115.jpg'
+import octoberGroceryStoreVisit from './assets/gallery/122153786241146115.jpg'
+import octoberLocalShopVisit from './assets/gallery/122153786127146115.jpg'
 import campaignHeadquartersOpening from './assets/gallery/122153577105146115.jpg'
 import octoberMarketGreetingWithPartners from './assets/gallery/122153469327146115.jpg'
 import octoberTemplePressEvent from './assets/gallery/122153469315146115.jpg'
@@ -103,6 +108,12 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-16 上午核實 Facebook 相片頁；此批均為當日發布。
+  { id: '122153786415146115', title: '走訪地方店家，與市民面對面交流', district: '地方走訪', date: '2026-10-16', image: octoberShopGreeting, url: 'https://www.facebook.com/photo.php?fbid=122153786415146115' },
+  { id: '122153786361146115', title: '晚間街頭走訪，持續深入鄰里宣傳', district: '地方行動', date: '2026-10-16', image: octoberNightStreetOutreach, url: 'https://www.facebook.com/photo.php?fbid=122153786361146115' },
+  { id: '122153786301146115', title: '夜間公園拜訪，傾聽居民想法', district: '地方走訪', date: '2026-10-16', image: octoberParkConversation, url: 'https://www.facebook.com/photo.php?fbid=122153786301146115' },
+  { id: '122153786241146115', title: '走進雜貨店，向在地商家問好', district: '商家走訪', date: '2026-10-16', image: octoberGroceryStoreVisit, url: 'https://www.facebook.com/photo.php?fbid=122153786241146115' },
+  { id: '122153786127146115', title: '拜訪在地店家，與老闆交流近況', district: '商家走訪', date: '2026-10-16', image: octoberLocalShopVisit, url: 'https://www.facebook.com/photo.php?fbid=122153786127146115' },
   // 2026-10-15 上午核實 Facebook 相片頁；貼文顯示「20 小時前」，換算為 10 月 14 日。
   { id: '122153577105146115', title: '吳亞倫競選總部成立茶會：10 月 25 日三峽登場', district: '活動公告', date: '2026-10-14', image: campaignHeadquartersOpening, url: 'https://www.facebook.com/photo.php?fbid=122153577105146115' },
   // 2026-10-14 上午核實 Facebook 相片頁；此批皆顯示「20 小時前」，換算為 10 月 13 日。
