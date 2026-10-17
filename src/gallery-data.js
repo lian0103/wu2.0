@@ -1,3 +1,5 @@
+import octoberSupporterTenVotes from './assets/gallery/122153850489146115.jpg'
+import octoberWeekendOutreachSchedule from './assets/gallery/122153829501146115.jpg'
 import octoberShopGreeting from './assets/gallery/122153786415146115.jpg'
 import octoberNightStreetOutreach from './assets/gallery/122153786361146115.jpg'
 import octoberParkConversation from './assets/gallery/122153786301146115.jpg'
@@ -108,6 +110,9 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-17 上午核實 Facebook 相片頁；兩則顯示「11、15 小時前」，換算為 10 月 16 日。
+  { id: '122153850489146115', title: '晚間走訪遇到熱情班長，承諾協助拉十票', district: '地方走訪', date: '2026-10-16', image: octoberSupporterTenVotes, url: 'https://www.facebook.com/photo.php?fbid=122153850489146115' },
+  { id: '122153829501146115', title: '週末嗡嗡嗡：樹林、三峽與土城走訪行程', district: '最新行程', date: '2026-10-16', image: octoberWeekendOutreachSchedule, url: 'https://www.facebook.com/photo.php?fbid=122153829501146115' },
   // 2026-10-16 上午核實 Facebook 相片頁；此批均為當日發布。
   { id: '122153786415146115', title: '走訪地方店家，與市民面對面交流', district: '地方走訪', date: '2026-10-16', image: octoberShopGreeting, url: 'https://www.facebook.com/photo.php?fbid=122153786415146115' },
   { id: '122153786361146115', title: '晚間街頭走訪，持續深入鄰里宣傳', district: '地方行動', date: '2026-10-16', image: octoberNightStreetOutreach, url: 'https://www.facebook.com/photo.php?fbid=122153786361146115' },
