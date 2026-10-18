@@ -1,3 +1,8 @@
+import octoberBanquetTeaService from './assets/gallery/122153947731146115.jpg'
+import octoberBanquetTableGreeting from './assets/gallery/122153947683146115.jpg'
+import octoberBanquetToastConversation from './assets/gallery/122153947623146115.jpg'
+import octoberBanquetGroupSupport from './assets/gallery/122153947599146115.jpg'
+import octoberScooterOutreach from './assets/gallery/122153947533146115.jpg'
 import octoberSupporterTenVotes from './assets/gallery/122153850489146115.jpg'
 import octoberWeekendOutreachSchedule from './assets/gallery/122153829501146115.jpg'
 import octoberShopGreeting from './assets/gallery/122153786415146115.jpg'
@@ -110,6 +115,12 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-18 上午核實 Facebook 相片頁；同批五張均顯示「14 小時前」，換算為 10 月 17 日。
+  { id: '122153947731146115', title: '餐會走訪，接受鄉親熱情斟茶', district: '地方活動', date: '2026-10-17', image: octoberBanquetTeaService, url: 'https://www.facebook.com/photo.php?fbid=122153947731146115' },
+  { id: '122153947683146115', title: '餐會逐桌走訪，親切向長輩問好', district: '地方活動', date: '2026-10-17', image: octoberBanquetTableGreeting, url: 'https://www.facebook.com/photo.php?fbid=122153947683146115' },
+  { id: '122153947623146115', title: '餐會與鄉親舉杯交流，傾聽地方聲音', district: '地方活動', date: '2026-10-17', image: octoberBanquetToastConversation, url: 'https://www.facebook.com/photo.php?fbid=122153947623146115' },
+  { id: '122153947599146115', title: '餐會與支持者合影，一起舉手打氣', district: '地方活動', date: '2026-10-17', image: octoberBanquetGroupSupport, url: 'https://www.facebook.com/photo.php?fbid=122153947599146115' },
+  { id: '122153947533146115', title: '街頭走訪，向機車騎士送上行程資訊', district: '地方走訪', date: '2026-10-17', image: octoberScooterOutreach, url: 'https://www.facebook.com/photo.php?fbid=122153947533146115' },
   // 2026-10-17 上午核實 Facebook 相片頁；兩則顯示「11、15 小時前」，換算為 10 月 16 日。
   { id: '122153850489146115', title: '晚間走訪遇到熱情班長，承諾協助拉十票', district: '地方走訪', date: '2026-10-16', image: octoberSupporterTenVotes, url: 'https://www.facebook.com/photo.php?fbid=122153850489146115' },
   { id: '122153829501146115', title: '週末嗡嗡嗡：樹林、三峽與土城走訪行程', district: '最新行程', date: '2026-10-16', image: octoberWeekendOutreachSchedule, url: 'https://www.facebook.com/photo.php?fbid=122153829501146115' },
