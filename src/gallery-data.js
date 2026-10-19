@@ -1,3 +1,4 @@
+import octoberSupporterThumbsUp from './assets/gallery/122154025911146115.jpg'
 import octoberBanquetTeaService from './assets/gallery/122153947731146115.jpg'
 import octoberBanquetTableGreeting from './assets/gallery/122153947683146115.jpg'
 import octoberBanquetToastConversation from './assets/gallery/122153947623146115.jpg'
@@ -115,6 +116,8 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-19 上午核實 Facebook 相片頁；顯示「17 小時前」，換算為 10 月 18 日。
+  { id: '122154025911146115', title: '地方活動與鄉親合影，一起比讚打氣', district: '地方活動', date: '2026-10-18', image: octoberSupporterThumbsUp, url: 'https://www.facebook.com/photo.php?fbid=122154025911146115' },
   // 2026-10-18 上午核實 Facebook 相片頁；同批五張均顯示「14 小時前」，換算為 10 月 17 日。
   { id: '122153947731146115', title: '餐會走訪，接受鄉親熱情斟茶', district: '地方活動', date: '2026-10-17', image: octoberBanquetTeaService, url: 'https://www.facebook.com/photo.php?fbid=122153947731146115' },
   { id: '122153947683146115', title: '餐會逐桌走訪，親切向長輩問好', district: '地方活動', date: '2026-10-17', image: octoberBanquetTableGreeting, url: 'https://www.facebook.com/photo.php?fbid=122153947683146115' },
