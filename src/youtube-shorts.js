@@ -1,41 +1,48 @@
-export const youtubeShortsUpdatedAt = '2026-10-19T09:01:00+08:00'
+export const youtubeShortsUpdatedAt = '2026-10-20T09:13:00+08:00'
 
 // 此清單取自 YouTube 頻道公開摘要。日後排程只需更新這個檔案。
 export const youtubeShorts = [
+  {
+    id: 'wQLU0G9-orE',
+    category: '地方行動',
+    title: '樹林中華路與福順街路口，早安問候',
+    publishedAt: '2026-10-19T17:50:20-07:00',
+    views: 314,
+  },
   {
     id: 'LlemsjiaUUc',
     category: '人物日常',
     title: '快樂的出航，獻給大家',
     publishedAt: '2026-10-17T04:02:18-07:00',
-    views: 1756,
+    views: 1929,
   },
   {
     id: 'Ub-W3v6CWkc',
     category: '地方行動',
     title: '鶯歌二橋熱情揮手，用滿滿活力迎接美好的一天',
     publishedAt: '2026-10-14T17:21:08-07:00',
-    views: 2561,
+    views: 2611,
   },
   {
     id: 'jEVntAAge3o',
     category: '地方活動',
     title: '樹林慈聖宮天后宮 28 週年宮慶，吳姐姐獻唱〈夜來香〉：新北市長這一票，她推薦誰？',
     publishedAt: '2026-10-10T17:08:36-07:00',
-    views: 897,
+    views: 910,
   },
   {
     id: 's_cNj7SO8Us',
     category: '地方行動',
     title: '行程精華｜感謝里長與市民朋友的鼓勵，亞倫本週嗡嗡嗡',
     publishedAt: '2026-10-04T08:12:29-07:00',
-    views: 3027,
+    views: 3028,
   },
   {
     id: 'npKWUs6ZNLQ',
     category: '人物日常',
     title: '輕鬆的週六夜晚，一首〈甜蜜蜜〉送給大家',
     publishedAt: '2026-10-03T07:26:58-07:00',
-    views: 2939,
+    views: 2941,
   },
   {
     id: '5VdDxif7vvY',
@@ -56,14 +63,14 @@ export const youtubeShorts = [
     category: '選戰行動',
     title: '週末衝刺紀錄，亞倫到處嗡嗡嗡',
     publishedAt: '2026-09-13T15:10:37+00:00',
-    views: 2603,
+    views: 2605,
   },
   {
     id: 'YYpDfjiDGuM',
     category: '最新動態',
     title: '官網上線，亞倫繼續努力✈️',
     publishedAt: '2026-09-11T13:07:09+00:00',
-    views: 1413,
+    views: 1414,
   },
   {
     id: '6lI9vh2jxo0',
@@ -77,7 +84,7 @@ export const youtubeShorts = [
     category: '地方行動',
     title: '講到燒聲也要繼續！海山站街頭宣傳',
     publishedAt: '2026-09-08T14:43:06+00:00',
-    views: 3532,
+    views: 3533,
   },
   {
     id: 'tO9j9-dZ1XY',
@@ -91,7 +98,7 @@ export const youtubeShorts = [
     category: '選戰行動',
     title: '台灣的選擇，土樹三鶯的選擇是吳亞倫',
     publishedAt: '2026-08-28T15:21:04+00:00',
-    views: 3364,
+    views: 3365,
   },
   {
     id: 'lHdufmlX3fY',
@@ -140,6 +147,6 @@ export const youtubeShorts = [
     category: '夥伴應援',
     title: '跨區應援好鄰居，午後一起為理念努力',
     publishedAt: '2026-08-01T01:46:16+00:00',
-    views: 1892,
+    views: 1897,
   },
 ]
