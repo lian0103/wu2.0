@@ -1,3 +1,9 @@
+import octoberShopConversation from './assets/gallery/122154286617146115.jpg'
+import octoberNightBalloonWave from './assets/gallery/122154286593146115.jpg'
+import octoberNightStreetGreeting from './assets/gallery/122154286527146115.jpg'
+import octoberStorefrontConversation from './assets/gallery/122154286515146115.jpg'
+import headquartersTeaAnnouncement from './assets/gallery/122154269091146115.jpg'
+import octoberLateWeekSchedule from './assets/gallery/122154238257146115.jpg'
 import octoberSupporterThumbsUp from './assets/gallery/122154025911146115.jpg'
 import octoberBanquetTeaService from './assets/gallery/122153947731146115.jpg'
 import octoberBanquetTableGreeting from './assets/gallery/122153947683146115.jpg'
@@ -116,6 +122,13 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-21 上午核實 Facebook 相片頁；此批顯示「11–21 小時前」，皆換算為 10 月 20 日。
+  { id: '122154286617146115', title: '走訪在地店家，與店主親切交流', district: '商家走訪', date: '2026-10-20', image: octoberShopConversation, url: 'https://www.facebook.com/photo.php?fbid=122154286617146115' },
+  { id: '122154286593146115', title: '夜間街頭揮手，向往來市民問好', district: '地方行動', date: '2026-10-20', image: octoberNightBalloonWave, url: 'https://www.facebook.com/photo.php?fbid=122154286593146115' },
+  { id: '122154286527146115', title: '晚間街頭宣傳，持續爭取市民支持', district: '地方行動', date: '2026-10-20', image: octoberNightStreetGreeting, url: 'https://www.facebook.com/photo.php?fbid=122154286527146115' },
+  { id: '122154286515146115', title: '拜訪街坊店家，聆聽在地長輩分享', district: '商家走訪', date: '2026-10-20', image: octoberStorefrontConversation, url: 'https://www.facebook.com/photo.php?fbid=122154286515146115' },
+  { id: '122154269091146115', title: '吳亞倫競選總部成立茶會：10 月 25 日三峽舉行', district: '活動公告', date: '2026-10-20', image: headquartersTeaAnnouncement, url: 'https://www.facebook.com/photo.php?fbid=122154269091146115' },
+  { id: '122154238257146115', title: '本週嗡嗡嗡：土城、三峽與北大特區揮手行程', district: '最新行程', date: '2026-10-20', image: octoberLateWeekSchedule, url: 'https://www.facebook.com/photo.php?fbid=122154238257146115' },
   // 2026-10-19 上午核實 Facebook 相片頁；顯示「17 小時前」，換算為 10 月 18 日。
   { id: '122154025911146115', title: '地方活動與鄉親合影，一起比讚打氣', district: '地方活動', date: '2026-10-18', image: octoberSupporterThumbsUp, url: 'https://www.facebook.com/photo.php?fbid=122154025911146115' },
   // 2026-10-18 上午核實 Facebook 相片頁；同批五張均顯示「14 小時前」，換算為 10 月 17 日。
