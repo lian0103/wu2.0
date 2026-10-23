@@ -1,3 +1,4 @@
+import typhoonSafetyReminder from './assets/gallery/122154440739146115.jpg'
 import octoberShopConversation from './assets/gallery/122154286617146115.jpg'
 import octoberNightBalloonWave from './assets/gallery/122154286593146115.jpg'
 import octoberNightStreetGreeting from './assets/gallery/122154286527146115.jpg'
@@ -122,6 +123,8 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-23 上午核實 Facebook 相片頁；顯示「23 小時前」，換算為 10 月 22 日。
+  { id: '122154440739146115', title: '薔琵颱風接近，提醒做好居家防颱並避開山區海邊', district: '防災提醒', date: '2026-10-22', image: typhoonSafetyReminder, url: 'https://www.facebook.com/photo.php?fbid=122154440739146115' },
   // 2026-10-21 上午核實 Facebook 相片頁；此批顯示「11–21 小時前」，皆換算為 10 月 20 日。
   { id: '122154286617146115', title: '走訪在地店家，與店主親切交流', district: '商家走訪', date: '2026-10-20', image: octoberShopConversation, url: 'https://www.facebook.com/photo.php?fbid=122154286617146115' },
   { id: '122154286593146115', title: '夜間街頭揮手，向往來市民問好', district: '地方行動', date: '2026-10-20', image: octoberNightBalloonWave, url: 'https://www.facebook.com/photo.php?fbid=122154286593146115' },
