@@ -1,62 +1,69 @@
-export const youtubeShortsUpdatedAt = '2026-10-23T09:04:00+08:00'
+export const youtubeShortsUpdatedAt = '2026-10-24T09:02:00+08:00'
 
 // 此清單取自 YouTube 頻道公開摘要。日後排程只需更新這個檔案。
 export const youtubeShorts = [
+  {
+    id: '946V1YNdKhU',
+    category: '人物日常',
+    title: '真誠練唱，新北一起「川好勢」',
+    publishedAt: '2026-10-23T02:54:17-07:00',
+    views: 1650,
+  },
   {
     id: 'CAEpr12HX58',
     category: '最新動態',
     title: '吳姐姐忙防颱，10 月 25 日競總成立茶會見',
     publishedAt: '2026-10-22T06:47:15-07:00',
-    views: 1909,
+    views: 2829,
   },
   {
     id: 'wQLU0G9-orE',
     category: '地方行動',
     title: '樹林中華路與福順街路口，早安問候',
     publishedAt: '2026-10-19T17:50:20-07:00',
-    views: 2787,
+    views: 3013,
   },
   {
     id: 'LlemsjiaUUc',
     category: '人物日常',
     title: '快樂的出航，獻給大家',
     publishedAt: '2026-10-17T04:02:18-07:00',
-    views: 2105,
+    views: 2152,
   },
   {
     id: 'Ub-W3v6CWkc',
     category: '地方行動',
     title: '鶯歌二橋熱情揮手，用滿滿活力迎接美好的一天',
     publishedAt: '2026-10-14T17:21:08-07:00',
-    views: 2694,
+    views: 2720,
   },
   {
     id: 'jEVntAAge3o',
     category: '地方活動',
     title: '樹林慈聖宮天后宮 28 週年宮慶，吳姐姐獻唱〈夜來香〉：新北市長這一票，她推薦誰？',
     publishedAt: '2026-10-10T17:08:36-07:00',
-    views: 932,
+    views: 937,
   },
   {
     id: 's_cNj7SO8Us',
     category: '地方行動',
     title: '行程精華｜感謝里長與市民朋友的鼓勵，亞倫本週嗡嗡嗡',
     publishedAt: '2026-10-04T08:12:29-07:00',
-    views: 3044,
+    views: 3049,
   },
   {
     id: 'npKWUs6ZNLQ',
     category: '人物日常',
     title: '輕鬆的週六夜晚，一首〈甜蜜蜜〉送給大家',
     publishedAt: '2026-10-03T07:26:58-07:00',
-    views: 2960,
+    views: 2965,
   },
   {
     id: '5VdDxif7vvY',
     category: '選戰心聲',
     title: '這條路，我會穩穩地走下去',
     publishedAt: '2026-09-27T07:15:19-07:00',
-    views: 2143,
+    views: 2146,
   },
   {
     id: 'B_jKTV8_l3w',
@@ -77,14 +84,14 @@ export const youtubeShorts = [
     category: '最新動態',
     title: '官網上線，亞倫繼續努力✈️',
     publishedAt: '2026-09-11T13:07:09+00:00',
-    views: 1422,
+    views: 1423,
   },
   {
     id: '6lI9vh2jxo0',
     category: '人物日常',
     title: '國民體育日動起來！第一次打匹克球，球跑吳姐姐也跟著跑',
     publishedAt: '2026-09-09T08:09:28+00:00',
-    views: 1782,
+    views: 1783,
   },
   {
     id: 'JOGv0O3p2Ec',
@@ -140,7 +147,7 @@ export const youtubeShorts = [
     category: '政策議題',
     title: '台灣要有鞭刑嗎？吳姐姐怎麼看？',
     publishedAt: '2026-08-10T22:48:18+00:00',
-    views: 2404,
+    views: 2405,
   },
   {
     id: 'isxcxiGRjVA',
@@ -154,6 +161,6 @@ export const youtubeShorts = [
     category: '夥伴應援',
     title: '跨區應援好鄰居，午後一起為理念努力',
     publishedAt: '2026-08-01T01:46:16+00:00',
-    views: 1905,
+    views: 1908,
   },
 ]
