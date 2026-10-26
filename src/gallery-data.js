@@ -1,3 +1,11 @@
+import headquartersFamilySupport from './assets/gallery/122154811599146115.jpg'
+import headquartersSupporterGroup from './assets/gallery/122154811533146115.jpg'
+import headquartersCandidateGreeting from './assets/gallery/122154811353146115.jpg'
+import headquartersHighVoteBlessing from './assets/gallery/122154811137146115.jpg'
+import headquartersGuestSpeech from './assets/gallery/122154811119146115.jpg'
+import headquartersPartnerBlessing from './assets/gallery/122154811083146115.jpg'
+import headquartersCrowdGreeting from './assets/gallery/122154811299146115.jpg'
+import headquartersCrowdOverview from './assets/gallery/122154811011146115.jpg'
 import typhoonSafetyReminder from './assets/gallery/122154440739146115.jpg'
 import octoberShopConversation from './assets/gallery/122154286617146115.jpg'
 import octoberNightBalloonWave from './assets/gallery/122154286593146115.jpg'
@@ -123,6 +131,15 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-26 上午核實 Facebook 相片頁；此批均顯示「17 小時前」，換算為 10 月 25 日。
+  { id: '122154811599146115', title: '競選總部成立茶會，與到場家庭合影留念', district: '競總成立', date: '2026-10-25', image: headquartersFamilySupport, url: 'https://www.facebook.com/photo.php?fbid=122154811599146115' },
+  { id: '122154811533146115', title: '競選總部成立茶會，與支持者在舞台前合影', district: '競總成立', date: '2026-10-25', image: headquartersSupporterGroup, url: 'https://www.facebook.com/photo.php?fbid=122154811533146115' },
+  { id: '122154811353146115', title: '競選總部成立茶會，向到場夥伴握手致意', district: '競總成立', date: '2026-10-25', image: headquartersCandidateGreeting, url: 'https://www.facebook.com/photo.php?fbid=122154811353146115' },
+  { id: '122154811137146115', title: '競選總部成立茶會，接受高票當選祝福', district: '競總成立', date: '2026-10-25', image: headquartersHighVoteBlessing, url: 'https://www.facebook.com/photo.php?fbid=122154811137146115' },
+  { id: '122154811119146115', title: '競選總部成立茶會，與來賓一同登台', district: '競總成立', date: '2026-10-25', image: headquartersGuestSpeech, url: 'https://www.facebook.com/photo.php?fbid=122154811119146115' },
+  { id: '122154811083146115', title: '競選總部成立茶會，與夥伴一同向市民致意', district: '競總成立', date: '2026-10-25', image: headquartersPartnerBlessing, url: 'https://www.facebook.com/photo.php?fbid=122154811083146115' },
+  { id: '122154811299146115', title: '競選總部成立茶會，走入人群向支持者問好', district: '競總成立', date: '2026-10-25', image: headquartersCrowdGreeting, url: 'https://www.facebook.com/photo.php?fbid=122154811299146115' },
+  { id: '122154811011146115', title: '競選總部成立茶會，支持者揮旗齊聚現場', district: '競總成立', date: '2026-10-25', image: headquartersCrowdOverview, url: 'https://www.facebook.com/photo.php?fbid=122154811011146115' },
   // 2026-10-23 上午核實 Facebook 相片頁；顯示「23 小時前」，換算為 10 月 22 日。
   { id: '122154440739146115', title: '薔琵颱風接近，提醒做好居家防颱並避開山區海邊', district: '防災提醒', date: '2026-10-22', image: typhoonSafetyReminder, url: 'https://www.facebook.com/photo.php?fbid=122154440739146115' },
   // 2026-10-21 上午核實 Facebook 相片頁；此批顯示「11–21 小時前」，皆換算為 10 月 20 日。
