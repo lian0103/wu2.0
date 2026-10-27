@@ -1,3 +1,11 @@
+import octoberRoadsideWave from './assets/gallery/122155004799146115.jpg'
+import octoberIntersectionCampaign from './assets/gallery/122155004733146115.jpg'
+import octoberScooterGreeting from './assets/gallery/122155004709146115.jpg'
+import eveningPinwheelCraft from './assets/gallery/122154951963146115.jpg'
+import outdoorMoviePartner from './assets/gallery/122154951909146115.jpg'
+import parkPinwheelOutreach from './assets/gallery/122154951891146115.jpg'
+import communitySupporterHug from './assets/gallery/122154951813146115.jpg'
+import indoorElderGreeting from './assets/gallery/122154951789146115.jpg'
 import headquartersFamilySupport from './assets/gallery/122154811599146115.jpg'
 import headquartersSupporterGroup from './assets/gallery/122154811533146115.jpg'
 import headquartersCandidateGreeting from './assets/gallery/122154811353146115.jpg'
@@ -131,6 +139,16 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-27 上午核實 Facebook 相片頁；此批均顯示「44 分鐘前」，發布日期為 10 月 27 日。
+  { id: '122155004799146115', title: '清晨路口揮手，向往來市民問好', district: '地方行動', date: '2026-10-27', image: octoberRoadsideWave, url: 'https://www.facebook.com/photo.php?fbid=122155004799146115' },
+  { id: '122155004733146115', title: '路口宣傳，與夥伴一起向通勤市民揮手', district: '地方行動', date: '2026-10-27', image: octoberIntersectionCampaign, url: 'https://www.facebook.com/photo.php?fbid=122155004733146115' },
+  { id: '122155004709146115', title: '路口向機車騎士揮手問早', district: '地方行動', date: '2026-10-27', image: octoberScooterGreeting, url: 'https://www.facebook.com/photo.php?fbid=122155004709146115' },
+  // 2026-10-27 上午核實 Facebook 相片頁；此批均顯示「11 小時前」，換算為 10 月 26 日。
+  { id: '122154951963146115', title: '夜間活動與市民互動，一起製作小風車', district: '地方活動', date: '2026-10-26', image: eveningPinwheelCraft, url: 'https://www.facebook.com/photo.php?fbid=122154951963146115' },
+  { id: '122154951909146115', title: '戶外電影活動，與林晏良合影打氣', district: '夥伴應援', date: '2026-10-26', image: outdoorMoviePartner, url: 'https://www.facebook.com/photo.php?fbid=122154951909146115' },
+  { id: '122154951891146115', title: '公園走訪，帶著小風車與親子互動', district: '地方走訪', date: '2026-10-26', image: parkPinwheelOutreach, url: 'https://www.facebook.com/photo.php?fbid=122154951891146115' },
+  { id: '122154951813146115', title: '社區走訪，與支持者熱情擁抱', district: '社區走訪', date: '2026-10-26', image: communitySupporterHug, url: 'https://www.facebook.com/photo.php?fbid=122154951813146115' },
+  { id: '122154951789146115', title: '室內走訪，與長輩握手交流', district: '社區走訪', date: '2026-10-26', image: indoorElderGreeting, url: 'https://www.facebook.com/photo.php?fbid=122154951789146115' },
   // 2026-10-26 上午核實 Facebook 相片頁；此批均顯示「17 小時前」，換算為 10 月 25 日。
   { id: '122154811599146115', title: '競選總部成立茶會，與到場家庭合影留念', district: '競總成立', date: '2026-10-25', image: headquartersFamilySupport, url: 'https://www.facebook.com/photo.php?fbid=122154811599146115' },
   { id: '122154811533146115', title: '競選總部成立茶會，與支持者在舞台前合影', district: '競總成立', date: '2026-10-25', image: headquartersSupporterGroup, url: 'https://www.facebook.com/photo.php?fbid=122154811533146115' },
