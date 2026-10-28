@@ -1,3 +1,7 @@
+import candidateBallotPortrait from './assets/gallery/122155062111146115.jpg'
+import candidateNumberTwelveWave from './assets/gallery/122155028919146115.jpg'
+import candidateNumberTwelveTemple from './assets/gallery/122155028853146115.jpg'
+import campaignLaunchSupport from './assets/gallery/122155021869146115.jpg'
 import octoberRoadsideWave from './assets/gallery/122155004799146115.jpg'
 import octoberIntersectionCampaign from './assets/gallery/122155004733146115.jpg'
 import octoberScooterGreeting from './assets/gallery/122155004709146115.jpg'
@@ -139,6 +143,11 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-28 上午核實 Facebook 相片頁；首張顯示「15 小時前」，其餘三張顯示「20 小時前」，皆為 10 月 27 日發布。
+  { id: '122155062111146115', title: '12 號吳亞倫候選人形象照', district: '候選人形象', date: '2026-10-27', image: candidateBallotPortrait, url: 'https://www.facebook.com/photo.php?fbid=122155062111146115' },
+  { id: '122155028919146115', title: '12 號吳亞倫街頭揮手宣傳', district: '選戰行動', date: '2026-10-27', image: candidateNumberTwelveWave, url: 'https://www.facebook.com/photo.php?fbid=122155028919146115' },
+  { id: '122155028853146115', title: '12 號吳亞倫地方活動祈福', district: '地方活動', date: '2026-10-27', image: candidateNumberTwelveTemple, url: 'https://www.facebook.com/photo.php?fbid=122155028853146115' },
+  { id: '122155021869146115', title: '競選總部成立茶會，與李四川同台牽手', district: '夥伴應援', date: '2026-10-27', image: campaignLaunchSupport, url: 'https://www.facebook.com/photo.php?fbid=122155021869146115' },
   // 2026-10-27 上午核實 Facebook 相片頁；此批均顯示「44 分鐘前」，發布日期為 10 月 27 日。
   { id: '122155004799146115', title: '清晨路口揮手，向往來市民問好', district: '地方行動', date: '2026-10-27', image: octoberRoadsideWave, url: 'https://www.facebook.com/photo.php?fbid=122155004799146115' },
   { id: '122155004733146115', title: '路口宣傳，與夥伴一起向通勤市民揮手', district: '地方行動', date: '2026-10-27', image: octoberIntersectionCampaign, url: 'https://www.facebook.com/photo.php?fbid=122155004733146115' },
