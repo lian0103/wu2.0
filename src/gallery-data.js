@@ -1,3 +1,10 @@
+import octoberStreetWaveMorning from './assets/gallery/122155296993146115.jpg'
+import octoberStreetPuppetGreeting from './assets/gallery/122155296927146115.jpg'
+import octoberStreetSupporterConversation from './assets/gallery/122155296909146115.jpg'
+import octoberPinwheelAssembly from './assets/gallery/122155226199146115.jpg'
+import octoberCampaignFlag from './assets/gallery/122155226169146115.jpg'
+import octoberNightTeamPhoto from './assets/gallery/122155225941146115.jpg'
+import octoberNightStreetSpeech from './assets/gallery/122155225881146115.jpg'
 import candidateBallotPortrait from './assets/gallery/122155062111146115.jpg'
 import candidateNumberTwelveWave from './assets/gallery/122155028919146115.jpg'
 import candidateNumberTwelveTemple from './assets/gallery/122155028853146115.jpg'
@@ -143,6 +150,15 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-29 上午核實 Facebook 相片頁；此批均顯示「3 分鐘前」，為 10 月 29 日發布。
+  { id: '122155296993146115', title: '清晨街頭揮手，向往來市民問好', district: '地方行動', date: '2026-10-29', image: octoberStreetWaveMorning, url: 'https://www.facebook.com/photo.php?fbid=122155296993146115' },
+  { id: '122155296927146115', title: '街頭持手偶宣傳，爭取市民支持', district: '地方行動', date: '2026-10-29', image: octoberStreetPuppetGreeting, url: 'https://www.facebook.com/photo.php?fbid=122155296927146115' },
+  { id: '122155296909146115', title: '街頭走訪，與市民親切交流', district: '地方走訪', date: '2026-10-29', image: octoberStreetSupporterConversation, url: 'https://www.facebook.com/photo.php?fbid=122155296909146115' },
+  // 2026-10-29 上午核實 Facebook 相片頁；此批均顯示「12 小時前」，換算為 10 月 28 日。
+  { id: '122155226199146115', title: '競選總部準備粉色小風車', district: '選戰日常', date: '2026-10-28', image: octoberPinwheelAssembly, url: 'https://www.facebook.com/photo.php?fbid=122155226199146115' },
+  { id: '122155226169146115', title: '親手完成 12 號競選旗幟', district: '選戰日常', date: '2026-10-28', image: octoberCampaignFlag, url: 'https://www.facebook.com/photo.php?fbid=122155226169146115' },
+  { id: '122155225941146115', title: '晚間街頭宣傳，與志工團隊合影', district: '選戰行動', date: '2026-10-28', image: octoberNightTeamPhoto, url: 'https://www.facebook.com/photo.php?fbid=122155225941146115' },
+  { id: '122155225881146115', title: '晚間街頭站台，向市民揮手拜票', district: '選戰行動', date: '2026-10-28', image: octoberNightStreetSpeech, url: 'https://www.facebook.com/photo.php?fbid=122155225881146115' },
   // 2026-10-28 上午核實 Facebook 相片頁；首張顯示「15 小時前」，其餘三張顯示「20 小時前」，皆為 10 月 27 日發布。
   { id: '122155062111146115', title: '12 號吳亞倫候選人形象照', district: '候選人形象', date: '2026-10-27', image: candidateBallotPortrait, url: 'https://www.facebook.com/photo.php?fbid=122155062111146115' },
   { id: '122155028919146115', title: '12 號吳亞倫街頭揮手宣傳', district: '選戰行動', date: '2026-10-27', image: candidateNumberTwelveWave, url: 'https://www.facebook.com/photo.php?fbid=122155028919146115' },

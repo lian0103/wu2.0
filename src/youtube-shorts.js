@@ -1,4 +1,4 @@
-export const youtubeShortsUpdatedAt = '2026-10-28T09:01:00+08:00'
+export const youtubeShortsUpdatedAt = '2026-10-29T09:01:00+08:00'
 
 // 此清單取自 YouTube 頻道公開摘要。日後排程只需更新這個檔案。
 export const youtubeShorts = [
@@ -7,49 +7,49 @@ export const youtubeShorts = [
     category: '選戰心聲',
     title: '政治素人的參選理由，誠懇向市民朋友報告',
     publishedAt: '2026-10-27T06:34:58-07:00',
-    views: 1719,
+    views: 2119,
   },
   {
     id: 'hSNlyHzbnNQ',
     category: '選戰行動',
     title: '勇敢向前，為 12 號亞倫加油',
     publishedAt: '2026-10-26T23:03:10-07:00',
-    views: 2390,
+    views: 3624,
   },
   {
     id: '946V1YNdKhU',
     category: '人物日常',
     title: '真誠練唱，新北一起「川好勢」',
     publishedAt: '2026-10-23T02:54:17-07:00',
-    views: 2342,
+    views: 2365,
   },
   {
     id: 'CAEpr12HX58',
     category: '最新動態',
     title: '吳姐姐忙防颱，10 月 25 日競總成立茶會見',
     publishedAt: '2026-10-22T06:47:15-07:00',
-    views: 3862,
+    views: 3876,
   },
   {
     id: 'wQLU0G9-orE',
     category: '地方行動',
     title: '樹林中華路與福順街路口，早安問候',
     publishedAt: '2026-10-19T17:50:20-07:00',
-    views: 3302,
+    views: 3321,
   },
   {
     id: 'LlemsjiaUUc',
     category: '人物日常',
     title: '快樂的出航，獻給大家',
     publishedAt: '2026-10-17T04:02:18-07:00',
-    views: 2266,
+    views: 2291,
   },
   {
     id: 'Ub-W3v6CWkc',
     category: '地方行動',
     title: '鶯歌二橋熱情揮手，用滿滿活力迎接美好的一天',
     publishedAt: '2026-10-14T17:21:08-07:00',
-    views: 2832,
+    views: 2846,
   },
   {
     id: 'jEVntAAge3o',
@@ -70,7 +70,7 @@ export const youtubeShorts = [
     category: '人物日常',
     title: '輕鬆的週六夜晚，一首〈甜蜜蜜〉送給大家',
     publishedAt: '2026-10-03T07:26:58-07:00',
-    views: 2981,
+    views: 2982,
   },
   {
     id: '5VdDxif7vvY',
@@ -161,7 +161,7 @@ export const youtubeShorts = [
     category: '政策議題',
     title: '台灣要有鞭刑嗎？吳姐姐怎麼看？',
     publishedAt: '2026-08-10T22:48:18+00:00',
-    views: 2411,
+    views: 2412,
   },
   {
     id: 'isxcxiGRjVA',
