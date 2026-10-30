@@ -1,3 +1,8 @@
+import candidateNumberTwelvePortrait from './assets/gallery/122155398663146115.jpg'
+import octoberNightTeamSupport from './assets/gallery/122155342671146115.jpg'
+import octoberNightStreetWave from './assets/gallery/122155342611146115.jpg'
+import octoberNightSupporterPhoto from './assets/gallery/122155342587146115.jpg'
+import candidateNumberTwelveCampaignCard from './assets/gallery/122155299555146115.jpg'
 import octoberStreetWaveMorning from './assets/gallery/122155296993146115.jpg'
 import octoberStreetPuppetGreeting from './assets/gallery/122155296927146115.jpg'
 import octoberStreetSupporterConversation from './assets/gallery/122155296909146115.jpg'
@@ -150,6 +155,12 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-30 上午核實 Facebook 相片頁；依來源顯示時間換算為 10 月 30 日及 10 月 29 日發布。
+  { id: '122155398663146115', title: '12 號吳亞倫候選人形象照', district: '選戰行動', date: '2026-10-30', image: candidateNumberTwelvePortrait, url: 'https://www.facebook.com/photo.php?fbid=122155398663146115' },
+  { id: '122155342671146115', title: '夜間街頭行動，與團隊一起為 12 號加油', district: '地方行動', date: '2026-10-29', image: octoberNightTeamSupport, url: 'https://www.facebook.com/photo.php?fbid=122155342671146115' },
+  { id: '122155342611146115', title: '夜間街頭揮手，向往來市民問好', district: '地方行動', date: '2026-10-29', image: octoberNightStreetWave, url: 'https://www.facebook.com/photo.php?fbid=122155342611146115' },
+  { id: '122155342587146115', title: '夜間街頭獲得市民熱情支持', district: '地方行動', date: '2026-10-29', image: octoberNightSupporterPhoto, url: 'https://www.facebook.com/photo.php?fbid=122155342587146115' },
+  { id: '122155299555146115', title: '新北市議員候選人 12 號吳亞倫', district: '選戰行動', date: '2026-10-29', image: candidateNumberTwelveCampaignCard, url: 'https://www.facebook.com/photo.php?fbid=122155299555146115' },
   // 2026-10-29 上午核實 Facebook 相片頁；此批均顯示「3 分鐘前」，為 10 月 29 日發布。
   { id: '122155296993146115', title: '清晨街頭揮手，向往來市民問好', district: '地方行動', date: '2026-10-29', image: octoberStreetWaveMorning, url: 'https://www.facebook.com/photo.php?fbid=122155296993146115' },
   { id: '122155296927146115', title: '街頭持手偶宣傳，爭取市民支持', district: '地方行動', date: '2026-10-29', image: octoberStreetPuppetGreeting, url: 'https://www.facebook.com/photo.php?fbid=122155296927146115' },
