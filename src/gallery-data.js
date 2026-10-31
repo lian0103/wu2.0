@@ -1,3 +1,7 @@
+import halloweenCommunityGreeting from './assets/gallery/122155480881146115.jpg'
+import halloweenCostumePartnerPhoto from './assets/gallery/122155480647146115.jpg'
+import halloweenCostumeGreeting from './assets/gallery/122155480587146115.jpg'
+import headquartersPinwheelWorkshop from './assets/gallery/122155480563146115.jpg'
 import candidateNumberTwelvePortrait from './assets/gallery/122155398663146115.jpg'
 import octoberNightTeamSupport from './assets/gallery/122155342671146115.jpg'
 import octoberNightStreetWave from './assets/gallery/122155342611146115.jpg'
@@ -155,6 +159,11 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-10-31 上午核實 Facebook 相片頁；此批均顯示「11 小時前」，換算為 10 月 30 日。
+  { id: '122155480881146115', title: '萬聖節活動與市民歡樂互動', district: '地方活動', date: '2026-10-30', image: halloweenCommunityGreeting, url: 'https://www.facebook.com/photo.php?fbid=122155480881146115' },
+  { id: '122155480647146115', title: '萬聖節裝扮與夥伴合影', district: '地方活動', date: '2026-10-30', image: halloweenCostumePartnerPhoto, url: 'https://www.facebook.com/photo.php?fbid=122155480647146115' },
+  { id: '122155480587146115', title: '萬聖節活動向市民揮手問好', district: '地方活動', date: '2026-10-30', image: halloweenCostumeGreeting, url: 'https://www.facebook.com/photo.php?fbid=122155480587146115' },
+  { id: '122155480563146115', title: '競選總部與志工製作彩色小風車', district: '選戰日常', date: '2026-10-30', image: headquartersPinwheelWorkshop, url: 'https://www.facebook.com/photo.php?fbid=122155480563146115' },
   // 2026-10-30 上午核實 Facebook 相片頁；依來源顯示時間換算為 10 月 30 日及 10 月 29 日發布。
   { id: '122155398663146115', title: '12 號吳亞倫候選人形象照', district: '選戰行動', date: '2026-10-30', image: candidateNumberTwelvePortrait, url: 'https://www.facebook.com/photo.php?fbid=122155398663146115' },
   { id: '122155342671146115', title: '夜間街頭行動，與團隊一起為 12 號加油', district: '地方行動', date: '2026-10-29', image: octoberNightTeamSupport, url: 'https://www.facebook.com/photo.php?fbid=122155342671146115' },
