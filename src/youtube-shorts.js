@@ -1,62 +1,69 @@
-export const youtubeShortsUpdatedAt = '2026-10-31T09:11:00+08:00'
+export const youtubeShortsUpdatedAt = '2026-11-01T09:02:00+08:00'
 
 // 此清單取自 YouTube 頻道公開摘要。日後排程只需更新這個檔案。
 export const youtubeShorts = [
+  {
+    id: 'spzQdRkTqLA',
+    category: '最新動態',
+    title: '2026年10月31日',
+    publishedAt: '2026-10-30T23:36:40-07:00',
+    views: 1424,
+  },
   {
     id: 'm4zxponemZ4',
     category: '夥伴應援',
     title: '感謝新莊陳世軒議員到三峽，為吳姐姐加油',
     publishedAt: '2026-10-29T08:09:42-07:00',
-    views: 2455,
+    views: 2668,
   },
   {
     id: 'WfZNI69kAu4',
     category: '選戰心聲',
     title: '政治素人的參選理由，誠懇向市民朋友報告',
     publishedAt: '2026-10-27T06:34:58-07:00',
-    views: 2539,
+    views: 2643,
   },
   {
     id: 'hSNlyHzbnNQ',
     category: '選戰行動',
     title: '勇敢向前，為 12 號亞倫加油',
     publishedAt: '2026-10-26T23:03:10-07:00',
-    views: 4114,
+    views: 4278,
   },
   {
     id: '946V1YNdKhU',
     category: '人物日常',
     title: '真誠練唱，新北一起「川好勢」',
     publishedAt: '2026-10-23T02:54:17-07:00',
-    views: 2415,
+    views: 2430,
   },
   {
     id: 'CAEpr12HX58',
     category: '最新動態',
     title: '吳姐姐忙防颱，10 月 25 日競總成立茶會見',
     publishedAt: '2026-10-22T06:47:15-07:00',
-    views: 3952,
+    views: 3956,
   },
   {
     id: 'wQLU0G9-orE',
     category: '地方行動',
     title: '樹林中華路與福順街路口，早安問候',
     publishedAt: '2026-10-19T17:50:20-07:00',
-    views: 3369,
+    views: 3378,
   },
   {
     id: 'LlemsjiaUUc',
     category: '人物日常',
     title: '快樂的出航，獻給大家',
     publishedAt: '2026-10-17T04:02:18-07:00',
-    views: 2342,
+    views: 2363,
   },
   {
     id: 'Ub-W3v6CWkc',
     category: '地方行動',
     title: '鶯歌二橋熱情揮手，用滿滿活力迎接美好的一天',
     publishedAt: '2026-10-14T17:21:08-07:00',
-    views: 2890,
+    views: 2901,
   },
   {
     id: 'jEVntAAge3o',
@@ -77,7 +84,7 @@ export const youtubeShorts = [
     category: '人物日常',
     title: '輕鬆的週六夜晚，一首〈甜蜜蜜〉送給大家',
     publishedAt: '2026-10-03T07:26:58-07:00',
-    views: 2985,
+    views: 2986,
   },
   {
     id: '5VdDxif7vvY',
@@ -91,7 +98,7 @@ export const youtubeShorts = [
     category: '地方行動',
     title: '行程精華｜55 秒看完 1 小時 43 分的直播',
     publishedAt: '2026-09-17T07:50:12-07:00',
-    views: 2334,
+    views: 2335,
   },
   {
     id: 'xA0DZkk_nzU',
@@ -119,7 +126,7 @@ export const youtubeShorts = [
     category: '地方行動',
     title: '講到燒聲也要繼續！海山站街頭宣傳',
     publishedAt: '2026-09-08T14:43:06+00:00',
-    views: 3555,
+    views: 3556,
   },
   {
     id: 'tO9j9-dZ1XY',
@@ -161,27 +168,27 @@ export const youtubeShorts = [
     category: '吳姐姐日常',
     title: '假日加滿油！亞倫和夥伴們行程嗡嗡嗡',
     publishedAt: '2026-08-16T03:16:18+00:00',
-    views: 1632,
+    views: 1633,
   },
   {
     id: 'Vq_MjlTdBz8',
     category: '政策議題',
     title: '台灣要有鞭刑嗎？吳姐姐怎麼看？',
     publishedAt: '2026-08-10T22:48:18+00:00',
-    views: 2415,
+    views: 2418,
   },
   {
     id: 'isxcxiGRjVA',
     category: '地方行動',
     title: '把握每一次機會，亞倫衝衝衝！',
     publishedAt: '2026-08-01T12:25:10+00:00',
-    views: 2144,
+    views: 2145,
   },
   {
     id: 'd-NUNcOvfk4',
     category: '夥伴應援',
     title: '跨區應援好鄰居，午後一起為理念努力',
     publishedAt: '2026-08-01T01:46:16+00:00',
-    views: 1922,
+    views: 1925,
   },
 ]
