@@ -1,3 +1,10 @@
+import templePinwheelGreeting from './assets/gallery/122155776909146115.jpg'
+import templeChildrenPhoto from './assets/gallery/122155776867146115.jpg'
+import templeCostumeChildren from './assets/gallery/122155776825146115.jpg'
+import sanxiaBridgeNightGreeting from './assets/gallery/122155776699146115.jpg'
+import communityBanquetHandshake from './assets/gallery/122155776603146115.jpg'
+import communityBanquetToast from './assets/gallery/122155776579146115.jpg'
+import communityBanquetElderGreeting from './assets/gallery/122155776489146115.jpg'
 import halloweenCommunityGreeting from './assets/gallery/122155480881146115.jpg'
 import halloweenCostumePartnerPhoto from './assets/gallery/122155480647146115.jpg'
 import halloweenCostumeGreeting from './assets/gallery/122155480587146115.jpg'
@@ -159,6 +166,14 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-11-02 上午核實 Facebook 相片頁；此批均顯示「19 小時前」，為 11 月 1 日發布。
+  { id: '122155776909146115', title: '廟前活動贈送小風車，與孩子親切互動', district: '地方活動', date: '2026-11-01', image: templePinwheelGreeting, url: 'https://www.facebook.com/photo.php?fbid=122155776909146115' },
+  { id: '122155776867146115', title: '廟前活動與裝扮小朋友開心合影', district: '地方活動', date: '2026-11-01', image: templeChildrenPhoto, url: 'https://www.facebook.com/photo.php?fbid=122155776867146115' },
+  { id: '122155776825146115', title: '廟前活動與孩子分享彩色小風車', district: '地方活動', date: '2026-11-01', image: templeCostumeChildren, url: 'https://www.facebook.com/photo.php?fbid=122155776825146115' },
+  { id: '122155776699146115', title: '三峽街頭夜間走訪，向市民問好', district: '地方走訪', date: '2026-11-01', image: sanxiaBridgeNightGreeting, url: 'https://www.facebook.com/photo.php?fbid=122155776699146115' },
+  { id: '122155776603146115', title: '社區辦桌與市民握手交流', district: '地方活動', date: '2026-11-01', image: communityBanquetHandshake, url: 'https://www.facebook.com/photo.php?fbid=122155776603146115' },
+  { id: '122155776579146115', title: '社區辦桌向長輩舉杯致意', district: '地方活動', date: '2026-11-01', image: communityBanquetToast, url: 'https://www.facebook.com/photo.php?fbid=122155776579146115' },
+  { id: '122155776489146115', title: '社區辦桌親切問候長輩', district: '地方活動', date: '2026-11-01', image: communityBanquetElderGreeting, url: 'https://www.facebook.com/photo.php?fbid=122155776489146115' },
   // 2026-10-31 上午核實 Facebook 相片頁；此批均顯示「11 小時前」，換算為 10 月 30 日。
   { id: '122155480881146115', title: '萬聖節活動與市民歡樂互動', district: '地方活動', date: '2026-10-30', image: halloweenCommunityGreeting, url: 'https://www.facebook.com/photo.php?fbid=122155480881146115' },
   { id: '122155480647146115', title: '萬聖節裝扮與夥伴合影', district: '地方活動', date: '2026-10-30', image: halloweenCostumePartnerPhoto, url: 'https://www.facebook.com/photo.php?fbid=122155480647146115' },
