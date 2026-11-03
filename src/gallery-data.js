@@ -1,3 +1,11 @@
+import dingfuNightLivestream from './assets/gallery/122156132751146115.jpg'
+import dingfuSupporterSelfie from './assets/gallery/122156132685146115.jpg'
+import dingfuStreetWave from './assets/gallery/122156132631146115.jpg'
+import numberTwelveStickerWorkshop from './assets/gallery/122156091465146115.jpg'
+import sanxiaNightBikeMarket from './assets/gallery/122156007957146115.jpg'
+import sanxiaNightBikeGreeting from './assets/gallery/122156007915146115.jpg'
+import sanxiaNightBikeTeam from './assets/gallery/122156007867146115.jpg'
+import politicalDonationJusticeCard from './assets/gallery/122155991595146115.jpg'
 import templePinwheelGreeting from './assets/gallery/122155776909146115.jpg'
 import templeChildrenPhoto from './assets/gallery/122155776867146115.jpg'
 import templeCostumeChildren from './assets/gallery/122155776825146115.jpg'
@@ -166,6 +174,15 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-11-03 上午核實 Facebook 相片頁；依來源完整時間分為 11 月 3 日及 11 月 2 日發布。
+  { id: '122156132751146115', title: '頂福里夜間街頭直播，向市民問好', district: '地方行動', date: '2026-11-03', image: dingfuNightLivestream, url: 'https://www.facebook.com/photo.php?fbid=122156132751146115' },
+  { id: '122156132685146115', title: '頂福里夜間宣傳，與市民開心合影', district: '地方行動', date: '2026-11-03', image: dingfuSupporterSelfie, url: 'https://www.facebook.com/photo.php?fbid=122156132685146115' },
+  { id: '122156132631146115', title: '頂福里夜間站路口，向往來市民揮手', district: '地方行動', date: '2026-11-03', image: dingfuStreetWave, url: 'https://www.facebook.com/photo.php?fbid=122156132631146115' },
+  { id: '122156091465146115', title: '12 號貼紙來嘍！一起把 12 貼上小物', district: '選戰行動', date: '2026-11-02', image: numberTwelveStickerWorkshop, url: 'https://www.facebook.com/photo.php?fbid=122156091465146115' },
+  { id: '122156007957146115', title: '三峽夜間單車隊穿越市場街頭宣傳', district: '地方行動', date: '2026-11-02', image: sanxiaNightBikeMarket, url: 'https://www.facebook.com/photo.php?fbid=122156007957146115' },
+  { id: '122156007915146115', title: '三峽夜騎宣傳，與市民沿街問好', district: '地方行動', date: '2026-11-02', image: sanxiaNightBikeGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156007915146115' },
+  { id: '122156007867146115', title: '三峽夜騎團隊整裝出發', district: '地方行動', date: '2026-11-02', image: sanxiaNightBikeTeam, url: 'https://www.facebook.com/photo.php?fbid=122156007867146115' },
+  { id: '122155991595146115', title: '柯文哲質疑政治獻金案件的司法辦案標準', district: '公共議題', date: '2026-11-02', image: politicalDonationJusticeCard, url: 'https://www.facebook.com/photo.php?fbid=122155991595146115' },
   // 2026-11-02 上午核實 Facebook 相片頁；此批均顯示「19 小時前」，為 11 月 1 日發布。
   { id: '122155776909146115', title: '廟前活動贈送小風車，與孩子親切互動', district: '地方活動', date: '2026-11-01', image: templePinwheelGreeting, url: 'https://www.facebook.com/photo.php?fbid=122155776909146115' },
   { id: '122155776867146115', title: '廟前活動與裝扮小朋友開心合影', district: '地方活動', date: '2026-11-01', image: templeChildrenPhoto, url: 'https://www.facebook.com/photo.php?fbid=122155776867146115' },
