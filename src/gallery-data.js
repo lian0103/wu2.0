@@ -1,3 +1,6 @@
+import shulinScooterMorningGreeting from './assets/gallery/122156193555146115.jpg'
+import shulinNumberTwelveStreetOutreach from './assets/gallery/122156193501146115.jpg'
+import shulinStreetWaveSupport from './assets/gallery/122156193441146115.jpg'
 import dingfuNightLivestream from './assets/gallery/122156132751146115.jpg'
 import dingfuSupporterSelfie from './assets/gallery/122156132685146115.jpg'
 import dingfuStreetWave from './assets/gallery/122156132631146115.jpg'
@@ -174,6 +177,10 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-11-04 上午核實 Facebook 相片頁；來源完整時間均為 11 月 4 日上午 8:30。
+  { id: '122156193555146115', title: '樹林路口向機車騎士親切問早', district: '地方行動', date: '2026-11-04', image: shulinScooterMorningGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156193555146115' },
+  { id: '122156193501146115', title: '穿著 12 號背心，樹林路口站街宣傳', district: '地方行動', date: '2026-11-04', image: shulinNumberTwelveStreetOutreach, url: 'https://www.facebook.com/photo.php?fbid=122156193501146115' },
+  { id: '122156193441146115', title: '樹林街頭揮手，為 12 號爭取支持', district: '地方行動', date: '2026-11-04', image: shulinStreetWaveSupport, url: 'https://www.facebook.com/photo.php?fbid=122156193441146115' },
   // 2026-11-03 上午核實 Facebook 相片頁；依來源完整時間分為 11 月 3 日及 11 月 2 日發布。
   { id: '122156132751146115', title: '頂福里夜間街頭直播，向市民問好', district: '地方行動', date: '2026-11-03', image: dingfuNightLivestream, url: 'https://www.facebook.com/photo.php?fbid=122156132751146115' },
   { id: '122156132685146115', title: '頂福里夜間宣傳，與市民開心合影', district: '地方行動', date: '2026-11-03', image: dingfuSupporterSelfie, url: 'https://www.facebook.com/photo.php?fbid=122156132685146115' },
