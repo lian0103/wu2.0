@@ -1,3 +1,6 @@
+import beidaNightTeamPhoto from './assets/gallery/122156233935146115.jpg'
+import beidaNightBalloonOutreach from './assets/gallery/122156233893146115.jpg'
+import beidaNightSupporterPhoto from './assets/gallery/122156233839146115.jpg'
 import shulinScooterMorningGreeting from './assets/gallery/122156193555146115.jpg'
 import shulinNumberTwelveStreetOutreach from './assets/gallery/122156193501146115.jpg'
 import shulinStreetWaveSupport from './assets/gallery/122156193441146115.jpg'
@@ -177,6 +180,10 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-11-05 上午核實 Facebook 相片頁；來源完整時間均為 11 月 4 日晚間 7:17，地點為北大特區。
+  { id: '122156233935146115', title: '北大特區夜間宣傳，與志工團隊合影', district: '地方行動', date: '2026-11-04', image: beidaNightTeamPhoto, url: 'https://www.facebook.com/photo.php?fbid=122156233935146115' },
+  { id: '122156233893146115', title: '北大特區路口舉起 12 號氣球宣傳', district: '地方行動', date: '2026-11-04', image: beidaNightBalloonOutreach, url: 'https://www.facebook.com/photo.php?fbid=122156233893146115' },
+  { id: '122156233839146115', title: '北大特區夜間走訪，與市民開心合影', district: '地方走訪', date: '2026-11-04', image: beidaNightSupporterPhoto, url: 'https://www.facebook.com/photo.php?fbid=122156233839146115' },
   // 2026-11-04 上午核實 Facebook 相片頁；來源完整時間均為 11 月 4 日上午 8:30。
   { id: '122156193555146115', title: '樹林路口向機車騎士親切問早', district: '地方行動', date: '2026-11-04', image: shulinScooterMorningGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156193555146115' },
   { id: '122156193501146115', title: '穿著 12 號背心，樹林路口站街宣傳', district: '地方行動', date: '2026-11-04', image: shulinNumberTwelveStreetOutreach, url: 'https://www.facebook.com/photo.php?fbid=122156193501146115' },
