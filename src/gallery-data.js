@@ -1,3 +1,8 @@
+import haishanMorningStreetWave from './assets/gallery/122156404317146115.jpg'
+import haishanMorningCommuterGreeting from './assets/gallery/122156404251146115.jpg'
+import haishanMorningElderConversation from './assets/gallery/122156404239146115.jpg'
+import beidaXueqinNightBalloonOutreach from './assets/gallery/122156369259146115.jpg'
+import beidaNightScooterOutreach from './assets/gallery/122156369175146115.jpg'
 import beidaNightTeamPhoto from './assets/gallery/122156233935146115.jpg'
 import beidaNightBalloonOutreach from './assets/gallery/122156233893146115.jpg'
 import beidaNightSupporterPhoto from './assets/gallery/122156233839146115.jpg'
@@ -180,6 +185,12 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-11-06 上午核實 Facebook 相片頁；前三張為海山捷運站上午 9:00，後兩張為北大特區上午 12:15。
+  { id: '122156404317146115', title: '海山捷運站早晨站街，持 12 號手偶揮手', district: '地方行動', date: '2026-11-06', image: haishanMorningStreetWave, url: 'https://www.facebook.com/photo.php?fbid=122156404317146115' },
+  { id: '122156404251146115', title: '海山捷運站向通勤市民揮手問早', district: '地方行動', date: '2026-11-06', image: haishanMorningCommuterGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156404251146115' },
+  { id: '122156404239146115', title: '海山捷運站走訪，與晨運長輩交流', district: '地方走訪', date: '2026-11-06', image: haishanMorningElderConversation, url: 'https://www.facebook.com/photo.php?fbid=122156404239146115' },
+  { id: '122156369259146115', title: '北大特區學勤路口晚間氣球宣傳', district: '地方行動', date: '2026-11-06', image: beidaXueqinNightBalloonOutreach, url: 'https://www.facebook.com/photo.php?fbid=122156369259146115' },
+  { id: '122156369175146115', title: '北大特區夜間向機車騎士宣傳', district: '地方行動', date: '2026-11-06', image: beidaNightScooterOutreach, url: 'https://www.facebook.com/photo.php?fbid=122156369175146115' },
   // 2026-11-05 上午核實 Facebook 相片頁；來源完整時間均為 11 月 4 日晚間 7:17，地點為北大特區。
   { id: '122156233935146115', title: '北大特區夜間宣傳，與志工團隊合影', district: '地方行動', date: '2026-11-04', image: beidaNightTeamPhoto, url: 'https://www.facebook.com/photo.php?fbid=122156233935146115' },
   { id: '122156233893146115', title: '北大特區路口舉起 12 號氣球宣傳', district: '地方行動', date: '2026-11-04', image: beidaNightBalloonOutreach, url: 'https://www.facebook.com/photo.php?fbid=122156233893146115' },
