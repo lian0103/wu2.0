@@ -1,3 +1,8 @@
+import nightFamilyGreeting from './assets/gallery/122156503053146115.jpg'
+import nightBikeTeamRide from './assets/gallery/122156503023146115.jpg'
+import nightBikeTeamPhoto from './assets/gallery/122156502963146115.jpg'
+import nightWaterSupport from './assets/gallery/122156502933146115.jpg'
+import nightSupporterHandshake from './assets/gallery/122156502849146115.jpg'
 import haishanMorningStreetWave from './assets/gallery/122156404317146115.jpg'
 import haishanMorningCommuterGreeting from './assets/gallery/122156404251146115.jpg'
 import haishanMorningElderConversation from './assets/gallery/122156404239146115.jpg'
@@ -185,6 +190,12 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-11-07 上午核實 Facebook 相片頁；來源完整時間均為 11 月 6 日晚間 11:50。
+  { id: '122156503053146115', title: '夜間街頭走訪，與親子家庭握手問好', district: '地方走訪', date: '2026-11-06', image: nightFamilyGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156503053146115' },
+  { id: '122156503023146115', title: '單車宣傳團隊夜間沿街出發', district: '選戰行動', date: '2026-11-06', image: nightBikeTeamRide, url: 'https://www.facebook.com/photo.php?fbid=122156503023146115' },
+  { id: '122156502963146115', title: '夜間單車宣傳，與志工團隊合影', district: '選戰行動', date: '2026-11-06', image: nightBikeTeamPhoto, url: 'https://www.facebook.com/photo.php?fbid=122156502963146115' },
+  { id: '122156502933146115', title: '夜間街頭走訪，接受市民遞水鼓勵', district: '地方走訪', date: '2026-11-06', image: nightWaterSupport, url: 'https://www.facebook.com/photo.php?fbid=122156502933146115' },
+  { id: '122156502849146115', title: '夜間街頭走訪，與市民握手交流', district: '地方走訪', date: '2026-11-06', image: nightSupporterHandshake, url: 'https://www.facebook.com/photo.php?fbid=122156502849146115' },
   // 2026-11-06 上午核實 Facebook 相片頁；前三張為海山捷運站上午 9:00，後兩張為北大特區上午 12:15。
   { id: '122156404317146115', title: '海山捷運站早晨站街，持 12 號手偶揮手', district: '地方行動', date: '2026-11-06', image: haishanMorningStreetWave, url: 'https://www.facebook.com/photo.php?fbid=122156404317146115' },
   { id: '122156404251146115', title: '海山捷運站向通勤市民揮手問早', district: '地方行動', date: '2026-11-06', image: haishanMorningCommuterGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156404251146115' },
