@@ -1,3 +1,10 @@
+import shulinBanquetToastGreeting from './assets/gallery/122156619543146115.jpg'
+import shulinStreetSelfie from './assets/gallery/122156619483146115.jpg'
+import shulinBanquetHandshake from './assets/gallery/122156619459146115.jpg'
+import shulinEventCrowdGreeting from './assets/gallery/122156619381146115.jpg'
+import shulinElderThumbsUp from './assets/gallery/122156619369146115.jpg'
+import shulinMarketLeafletGreeting from './assets/gallery/122156619285146115.jpg'
+import shulinMarketConversation from './assets/gallery/122156619255146115.jpg'
 import nightFamilyGreeting from './assets/gallery/122156503053146115.jpg'
 import nightBikeTeamRide from './assets/gallery/122156503023146115.jpg'
 import nightBikeTeamPhoto from './assets/gallery/122156502963146115.jpg'
@@ -190,6 +197,14 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-11-08 上午核實 Facebook 相片頁；來源完整時間均為 11 月 7 日晚間 9:55，地點為樹林區。
+  { id: '122156619543146115', title: '樹林區晚間餐會，與鄉親握手舉杯', district: '地方活動', date: '2026-11-07', image: shulinBanquetToastGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156619543146115' },
+  { id: '122156619483146115', title: '樹林區街頭宣傳，與市民自拍合影', district: '地方行動', date: '2026-11-07', image: shulinStreetSelfie, url: 'https://www.facebook.com/photo.php?fbid=122156619483146115' },
+  { id: '122156619459146115', title: '樹林區餐會走訪，與市民握手交流', district: '地方活動', date: '2026-11-07', image: shulinBanquetHandshake, url: 'https://www.facebook.com/photo.php?fbid=122156619459146115' },
+  { id: '122156619381146115', title: '樹林區地方活動，向現場鄉親揮手致意', district: '地方活動', date: '2026-11-07', image: shulinEventCrowdGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156619381146115' },
+  { id: '122156619369146115', title: '樹林區地方活動，獲得長輩比讚支持', district: '地方活動', date: '2026-11-07', image: shulinElderThumbsUp, url: 'https://www.facebook.com/photo.php?fbid=122156619369146115' },
+  { id: '122156619285146115', title: '樹林區市場走訪，向市民遞上行程文宣', district: '市場走訪', date: '2026-11-07', image: shulinMarketLeafletGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156619285146115' },
+  { id: '122156619255146115', title: '樹林區市場走訪，與市民親切交流', district: '市場走訪', date: '2026-11-07', image: shulinMarketConversation, url: 'https://www.facebook.com/photo.php?fbid=122156619255146115' },
   // 2026-11-07 上午核實 Facebook 相片頁；來源完整時間均為 11 月 6 日晚間 11:50。
   { id: '122156503053146115', title: '夜間街頭走訪，與親子家庭握手問好', district: '地方走訪', date: '2026-11-06', image: nightFamilyGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156503053146115' },
   { id: '122156503023146115', title: '單車宣傳團隊夜間沿街出發', district: '選戰行動', date: '2026-11-06', image: nightBikeTeamRide, url: 'https://www.facebook.com/photo.php?fbid=122156503023146115' },
