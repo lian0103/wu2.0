@@ -1,3 +1,11 @@
+import eveningStageCrowdGreeting from './assets/gallery/122156761089146115.jpg'
+import eveningPartnerChenYanting from './assets/gallery/122156761059146115.jpg'
+import eveningSupporterPhoto from './assets/gallery/122156761005146115.jpg'
+import eveningSupporterSelfie from './assets/gallery/122156760981146115.jpg'
+import eveningPartnerZhouXiaoyun from './assets/gallery/122156760927146115.jpg'
+import eveningTppPartnerHandshake from './assets/gallery/122156760897146115.jpg'
+import daytimeCandidateTeamStage from './assets/gallery/122156708157146115.jpg'
+import daytimeSupporterFlagGreeting from './assets/gallery/122156708091146115.jpg'
 import shulinBanquetToastGreeting from './assets/gallery/122156619543146115.jpg'
 import shulinStreetSelfie from './assets/gallery/122156619483146115.jpg'
 import shulinBanquetHandshake from './assets/gallery/122156619459146115.jpg'
@@ -197,6 +205,15 @@ export const facebookPhotosUrl = 'https://www.facebook.com/profile.php?id=615843
 // 陣列順序即顯示時序（最新到最舊）；x / y 對應目前素材圖中的照片位置。
 // 日後排程可將 image 欄位改成原始照片網址，並維持最新資料在最前方。
 export const galleryItems = [
+  // 2026-11-09 上午核實 Facebook 相片頁；前六張發布於 11 月 8 日晚間 7:38，後兩張發布於上午 11:50。
+  { id: '122156761089146115', title: '夜間大型活動登台，向現場群眾揮手', district: '地方活動', date: '2026-11-08', image: eveningStageCrowdGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156761089146115' },
+  { id: '122156761059146115', title: '夜間活動與陳彥廷並肩交流', district: '夥伴應援', date: '2026-11-08', image: eveningPartnerChenYanting, url: 'https://www.facebook.com/photo.php?fbid=122156761059146115' },
+  { id: '122156761005146115', title: '活動現場與市民合影，展示 12 號文宣', district: '地方活動', date: '2026-11-08', image: eveningSupporterPhoto, url: 'https://www.facebook.com/photo.php?fbid=122156761005146115' },
+  { id: '122156760981146115', title: '活動現場與市民自拍合影', district: '地方活動', date: '2026-11-08', image: eveningSupporterSelfie, url: 'https://www.facebook.com/photo.php?fbid=122156760981146115' },
+  { id: '122156760927146115', title: '夜間活動與龜山候選人周曉芸合影', district: '夥伴應援', date: '2026-11-08', image: eveningPartnerZhouXiaoyun, url: 'https://www.facebook.com/photo.php?fbid=122156760927146115' },
+  { id: '122156760897146115', title: '夜間活動與民眾黨夥伴握手交流', district: '夥伴應援', date: '2026-11-08', image: eveningTppPartnerHandshake, url: 'https://www.facebook.com/photo.php?fbid=122156760897146115' },
+  { id: '122156708157146115', title: '白天活動與民眾黨候選人共同上台加油', district: '夥伴應援', date: '2026-11-08', image: daytimeCandidateTeamStage, url: 'https://www.facebook.com/photo.php?fbid=122156708157146115' },
+  { id: '122156708091146115', title: '白天活動與支持者揮旗應援', district: '地方活動', date: '2026-11-08', image: daytimeSupporterFlagGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156708091146115' },
   // 2026-11-08 上午核實 Facebook 相片頁；來源完整時間均為 11 月 7 日晚間 9:55，地點為樹林區。
   { id: '122156619543146115', title: '樹林區晚間餐會，與鄉親握手舉杯', district: '地方活動', date: '2026-11-07', image: shulinBanquetToastGreeting, url: 'https://www.facebook.com/photo.php?fbid=122156619543146115' },
   { id: '122156619483146115', title: '樹林區街頭宣傳，與市民自拍合影', district: '地方行動', date: '2026-11-07', image: shulinStreetSelfie, url: 'https://www.facebook.com/photo.php?fbid=122156619483146115' },
